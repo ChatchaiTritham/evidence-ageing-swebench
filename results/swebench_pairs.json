@@ -1,0 +1,3342 @@
+{
+  "source": "SWE-bench/experiments, evaluation/{verified,lite}/*/per_instance_details.json",
+  "summary": {
+    "M": {
+      "pairs": 111,
+      "median_regression_rate": 0.11873350923482849,
+      "min": 0.03303303303303303,
+      "max": 1.0,
+      "median_flip_rate": 0.202,
+      "significant_after_holm": 68,
+      "pooled_regression_rate": 0.2783078357185941,
+      "median_asymmetry": 0.4772727272727273
+    },
+    "H": {
+      "pairs": 17,
+      "median_regression_rate": 0.06606606606606606,
+      "min": 0.0,
+      "max": 0.2009132420091324,
+      "median_flip_rate": 0.136,
+      "significant_after_holm": 8,
+      "pooled_regression_rate": 0.06778438795745448,
+      "median_asymmetry": 0.35294117647058826
+    },
+    "C": {
+      "pairs": 1,
+      "median_regression_rate": 0.057971014492753624,
+      "min": 0.057971014492753624,
+      "max": 0.057971014492753624,
+      "median_flip_rate": 0.108,
+      "significant_after_holm": 0,
+      "pooled_regression_rate": 0.057971014492753624,
+      "median_asymmetry": 0.25925925925925924
+    },
+    "N-rerun": {
+      "pairs": 12,
+      "median_regression_rate": 0.1836734693877551,
+      "min": 0.027777777777777776,
+      "max": 0.5,
+      "median_flip_rate": 0.16129032258064516,
+      "significant_after_holm": 0,
+      "pooled_regression_rate": 0.16435643564356436,
+      "median_asymmetry": 0.3333333333333333
+    },
+    "N-regrade": {
+      "pairs": 13,
+      "median_regression_rate": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "median_flip_rate": 0.0,
+      "significant_after_holm": 0,
+      "pooled_regression_rate": 0.0,
+      "median_asymmetry": 0.0
+    },
+    "N-resub": {
+      "pairs": 17,
+      "median_regression_rate": 0.11587982832618025,
+      "min": 0.036827195467422094,
+      "max": 0.37209302325581395,
+      "median_flip_rate": 0.17,
+      "significant_after_holm": 10,
+      "pooled_regression_rate": 0.12023057919297282,
+      "median_asymmetry": 0.46938775510204084
+    },
+    "tests": {
+      "H_vs_N-rerun_regression_rate": {
+        "U": 49.0,
+        "z": -2.346879446681253,
+        "p_one_sided": 0.9905343105408093,
+        "auc": 0.24019607843137256
+      },
+      "H_vs_N-rerun_asymmetry": {
+        "U": 110.0,
+        "z": 0.3542459542160381,
+        "p_one_sided": 0.3615772835411508,
+        "auc": 0.5392156862745098
+      },
+      "M_vs_N-rerun_regression_rate": {
+        "U": 707.0,
+        "z": 0.3494713074214246,
+        "p_one_sided": 0.36336775395785065,
+        "auc": 0.5307807807807807
+      },
+      "M_vs_N-rerun_asymmetry": {
+        "U": 813.5,
+        "z": 1.2572443376746374,
+        "p_one_sided": 0.10433258640763073,
+        "auc": 0.6107357357357357
+      }
+    }
+  },
+  "pairs": [
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v0.0.0",
+      "before": "20250720_mini-v0.0.0-Llama-4-Maverick-17B-Instruct",
+      "after": "20250720_mini-v0.0.0-claude-3-7-sonnet-20250219",
+      "n": 500,
+      "solved_before": 105,
+      "solved_after": 51,
+      "regressions": 91,
+      "improvements": 37,
+      "regression_rate": 0.8666666666666667,
+      "rate_ci95": [
+        0.7885632722139584,
+        0.9188868203976901
+      ],
+      "flip_rate": 0.256,
+      "mcnemar_p": 2.006129945030041e-06,
+      "p_holm": 0.00012036779670180247
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.0.0",
+      "before": "20250726_mini-v1.0.0_claude-sonnet-4-20250514",
+      "after": "20250726_mini-v1.0.0_gemini-2.5-pro",
+      "n": 500,
+      "solved_before": 324,
+      "solved_after": 268,
+      "regressions": 80,
+      "improvements": 24,
+      "regression_rate": 0.24691358024691357,
+      "rate_ci95": [
+        0.20310637756526673,
+        0.296652042354597
+      ],
+      "flip_rate": 0.208,
+      "mcnemar_p": 3.2215052465401456e-08,
+      "p_holm": 2.1584085151818974e-06
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.0.0",
+      "before": "20250726_mini-v1.0.0_claude-sonnet-4-20250514",
+      "after": "20250726_mini-v1.0.0_o3-2025-04-16",
+      "n": 500,
+      "solved_before": 324,
+      "solved_after": 292,
+      "regressions": 67,
+      "improvements": 35,
+      "regression_rate": 0.20679012345679013,
+      "rate_ci95": [
+        0.16625023389263335,
+        0.2542015940633064
+      ],
+      "flip_rate": 0.204,
+      "mcnemar_p": 0.001992805585714059,
+      "p_holm": 0.08170502901427643
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.0.0",
+      "before": "20250726_mini-v1.0.0_claude-sonnet-4-20250514",
+      "after": "20250726_mini-v1.0.0_o4-mini-2025-04-16",
+      "n": 500,
+      "solved_before": 324,
+      "solved_after": 225,
+      "regressions": 118,
+      "improvements": 19,
+      "regression_rate": 0.36419753086419754,
+      "rate_ci95": [
+        0.31367462872090873,
+        0.4179030600165792
+      ],
+      "flip_rate": 0.274,
+      "mcnemar_p": 1.199153418158447e-18,
+      "p_holm": 1.0072888712530955e-16
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.0.0",
+      "before": "20250726_mini-v1.0.0_claude-sonnet-4-20250514",
+      "after": "20250802_mini-v1.0.0_claude-4-opus-20250514",
+      "n": 500,
+      "solved_before": 324,
+      "solved_after": 338,
+      "regressions": 28,
+      "improvements": 42,
+      "regression_rate": 0.08641975308641975,
+      "rate_ci95": [
+        0.06046623549722119,
+        0.12206581656694637
+      ],
+      "flip_rate": 0.14,
+      "mcnemar_p": 0.11960933562988493,
+      "p_holm": 1.0
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.0.0",
+      "before": "20250726_mini-v1.0.0_claude-sonnet-4-20250514",
+      "after": "20250802_mini-v1.0.0_qwen3-coder-480b-a35b-instruct",
+      "n": 500,
+      "solved_before": 324,
+      "solved_after": 277,
+      "regressions": 80,
+      "improvements": 33,
+      "regression_rate": 0.24691358024691357,
+      "rate_ci95": [
+        0.20310637756526673,
+        0.296652042354597
+      ],
+      "flip_rate": 0.226,
+      "mcnemar_p": 1.1461598747783254e-05,
+      "p_holm": 0.0006418495298758623
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.0.0",
+      "before": "20250726_mini-v1.0.0_claude-sonnet-4-20250514",
+      "after": "20250803_mini-v1.0.0_qwen2-5-coder-32b-instruct",
+      "n": 500,
+      "solved_before": 324,
+      "solved_after": 45,
+      "regressions": 282,
+      "improvements": 3,
+      "regression_rate": 0.8703703703703703,
+      "rate_ci95": [
+        0.8294119694121418,
+        0.9026488794856186
+      ],
+      "flip_rate": 0.57,
+      "mcnemar_p": 1.241341877481298e-79,
+      "p_holm": 1.228928458706485e-77
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.0.0",
+      "before": "20250726_mini-v1.0.0_gemini-2.5-pro",
+      "after": "20250726_mini-v1.0.0_o3-2025-04-16",
+      "n": 500,
+      "solved_before": 268,
+      "solved_after": 292,
+      "regressions": 39,
+      "improvements": 63,
+      "regression_rate": 0.1455223880597015,
+      "rate_ci95": [
+        0.10831429109465848,
+        0.1927492694494231
+      ],
+      "flip_rate": 0.204,
+      "mcnemar_p": 0.022297661824692932,
+      "p_holm": 0.6689298547407879
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.0.0",
+      "before": "20250726_mini-v1.0.0_gemini-2.5-pro",
+      "after": "20250726_mini-v1.0.0_o4-mini-2025-04-16",
+      "n": 500,
+      "solved_before": 268,
+      "solved_after": 225,
+      "regressions": 85,
+      "improvements": 42,
+      "regression_rate": 0.31716417910447764,
+      "rate_ci95": [
+        0.26436560851375573,
+        0.37513033324056005
+      ],
+      "flip_rate": 0.254,
+      "mcnemar_p": 0.00017009447829625175,
+      "p_holm": 0.00867481839310884
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.0.0",
+      "before": "20250726_mini-v1.0.0_gemini-2.5-pro",
+      "after": "20250802_mini-v1.0.0_claude-4-opus-20250514",
+      "n": 500,
+      "solved_before": 268,
+      "solved_after": 338,
+      "regressions": 18,
+      "improvements": 88,
+      "regression_rate": 0.06716417910447761,
+      "rate_ci95": [
+        0.04290306252207529,
+        0.10365875877385586
+      ],
+      "flip_rate": 0.212,
+      "mcnemar_p": 2.970770255782769e-12,
+      "p_holm": 2.2577853943949045e-10
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.0.0",
+      "before": "20250726_mini-v1.0.0_gemini-2.5-pro",
+      "after": "20250802_mini-v1.0.0_qwen3-coder-480b-a35b-instruct",
+      "n": 500,
+      "solved_before": 268,
+      "solved_after": 277,
+      "regressions": 54,
+      "improvements": 63,
+      "regression_rate": 0.20149253731343283,
+      "rate_ci95": [
+        0.15784135329290147,
+        0.2535805924284304
+      ],
+      "flip_rate": 0.234,
+      "mcnemar_p": 0.45969138732555304,
+      "p_holm": 1.0
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.0.0",
+      "before": "20250726_mini-v1.0.0_gemini-2.5-pro",
+      "after": "20250803_mini-v1.0.0_qwen2-5-coder-32b-instruct",
+      "n": 500,
+      "solved_before": 268,
+      "solved_after": 45,
+      "regressions": 227,
+      "improvements": 4,
+      "regression_rate": 0.8470149253731343,
+      "rate_ci95": [
+        0.7990383699023386,
+        0.8851836181966131
+      ],
+      "flip_rate": 0.462,
+      "mcnemar_p": 6.817921209446024e-62,
+      "p_holm": 6.545204361068183e-60
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.0.0",
+      "before": "20250726_mini-v1.0.0_o3-2025-04-16",
+      "after": "20250726_mini-v1.0.0_o4-mini-2025-04-16",
+      "n": 500,
+      "solved_before": 292,
+      "solved_after": 225,
+      "regressions": 97,
+      "improvements": 30,
+      "regression_rate": 0.3321917808219178,
+      "rate_ci95": [
+        0.28065473426055826,
+        0.38808691667697043
+      ],
+      "flip_rate": 0.254,
+      "mcnemar_p": 1.984553317143075e-09,
+      "p_holm": 1.3891873220001525e-07
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.0.0",
+      "before": "20250726_mini-v1.0.0_o3-2025-04-16",
+      "after": "20250802_mini-v1.0.0_claude-4-opus-20250514",
+      "n": 500,
+      "solved_before": 292,
+      "solved_after": 338,
+      "regressions": 22,
+      "improvements": 68,
+      "regression_rate": 0.07534246575342465,
+      "rate_ci95": [
+        0.05027830631293851,
+        0.11143525932488932
+      ],
+      "flip_rate": 0.18,
+      "mcnemar_p": 1.2492581287631034e-06,
+      "p_holm": 7.620474585454931e-05
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.0.0",
+      "before": "20250726_mini-v1.0.0_o3-2025-04-16",
+      "after": "20250802_mini-v1.0.0_qwen3-coder-480b-a35b-instruct",
+      "n": 500,
+      "solved_before": 292,
+      "solved_after": 277,
+      "regressions": 61,
+      "improvements": 46,
+      "regression_rate": 0.2089041095890411,
+      "rate_ci95": [
+        0.1662052217595309,
+        0.25916294823414143
+      ],
+      "flip_rate": 0.214,
+      "mcnemar_p": 0.17564027334487997,
+      "p_holm": 1.0
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.0.0",
+      "before": "20250726_mini-v1.0.0_o3-2025-04-16",
+      "after": "20250803_mini-v1.0.0_qwen2-5-coder-32b-instruct",
+      "n": 500,
+      "solved_before": 292,
+      "solved_after": 45,
+      "regressions": 253,
+      "improvements": 6,
+      "regression_rate": 0.8664383561643836,
+      "rate_ci95": [
+        0.8226244102189452,
+        0.9007356581419615
+      ],
+      "flip_rate": 0.518,
+      "mcnemar_p": 8.744485933445694e-67,
+      "p_holm": 8.56959621477678e-65
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.0.0",
+      "before": "20250726_mini-v1.0.0_o4-mini-2025-04-16",
+      "after": "20250802_mini-v1.0.0_claude-4-opus-20250514",
+      "n": 500,
+      "solved_before": 225,
+      "solved_after": 338,
+      "regressions": 14,
+      "improvements": 127,
+      "regression_rate": 0.06222222222222222,
+      "rate_ci95": [
+        0.037422402663335325,
+        0.10172013086203766
+      ],
+      "flip_rate": 0.282,
+      "mcnemar_p": 5.815315210521221e-24,
+      "p_holm": 5.2337836894691e-22
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.0.0",
+      "before": "20250726_mini-v1.0.0_o4-mini-2025-04-16",
+      "after": "20250802_mini-v1.0.0_qwen3-coder-480b-a35b-instruct",
+      "n": 500,
+      "solved_before": 225,
+      "solved_after": 277,
+      "regressions": 37,
+      "improvements": 89,
+      "regression_rate": 0.16444444444444445,
+      "rate_ci95": [
+        0.1217212086464685,
+        0.2184337282181575
+      ],
+      "flip_rate": 0.252,
+      "mcnemar_p": 4.0992910972001675e-06,
+      "p_holm": 0.0002418581747348099
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.0.0",
+      "before": "20250726_mini-v1.0.0_o4-mini-2025-04-16",
+      "after": "20250803_mini-v1.0.0_qwen2-5-coder-32b-instruct",
+      "n": 500,
+      "solved_before": 225,
+      "solved_after": 45,
+      "regressions": 184,
+      "improvements": 4,
+      "regression_rate": 0.8177777777777778,
+      "rate_ci95": [
+        0.7621437445193254,
+        0.8627426397744393
+      ],
+      "flip_rate": 0.376,
+      "mcnemar_p": 2.626053623931675e-49,
+      "p_holm": 2.4947509427350914e-47
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.0.0",
+      "before": "20250802_mini-v1.0.0_claude-4-opus-20250514",
+      "after": "20250802_mini-v1.0.0_qwen3-coder-480b-a35b-instruct",
+      "n": 500,
+      "solved_before": 338,
+      "solved_after": 277,
+      "regressions": 80,
+      "improvements": 19,
+      "regression_rate": 0.23668639053254437,
+      "rate_ci95": [
+        0.19448941427548808,
+        0.2848015789798676
+      ],
+      "flip_rate": 0.198,
+      "mcnemar_p": 4.394027829089421e-10,
+      "p_holm": 3.163700036944383e-08
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.0.0",
+      "before": "20250802_mini-v1.0.0_claude-4-opus-20250514",
+      "after": "20250803_mini-v1.0.0_qwen2-5-coder-32b-instruct",
+      "n": 500,
+      "solved_before": 338,
+      "solved_after": 45,
+      "regressions": 295,
+      "improvements": 2,
+      "regression_rate": 0.8727810650887574,
+      "rate_ci95": [
+        0.8330200349686989,
+        0.9041635026697863
+      ],
+      "flip_rate": 0.594,
+      "mcnemar_p": 3.4759523554125695e-85,
+      "p_holm": 3.510711878966695e-83
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.0.0",
+      "before": "20250802_mini-v1.0.0_qwen3-coder-480b-a35b-instruct",
+      "after": "20250803_mini-v1.0.0_qwen2-5-coder-32b-instruct",
+      "n": 500,
+      "solved_before": 277,
+      "solved_after": 45,
+      "regressions": 235,
+      "improvements": 3,
+      "regression_rate": 0.8483754512635379,
+      "rate_ci95": [
+        0.8013929331585554,
+        0.8858271937742066
+      ],
+      "flip_rate": 0.476,
+      "mcnemar_p": 1.0174408616545886e-65,
+      "p_holm": 9.869176358049509e-64
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.15.0",
+      "before": "20251118_mini-v1.15.0_gemini-3-pro-preview-20251118",
+      "after": "20251120_mini-v1.15.0_gpt-5.1-2025-11-13",
+      "n": 500,
+      "solved_before": 371,
+      "solved_after": 330,
+      "regressions": 56,
+      "improvements": 15,
+      "regression_rate": 0.1509433962264151,
+      "rate_ci95": [
+        0.11810299152386693,
+        0.19093848092742982
+      ],
+      "flip_rate": 0.142,
+      "mcnemar_p": 1.0414019304757919e-06,
+      "p_holm": 6.45669196894991e-05
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.16.0",
+      "before": "20251124_mini-v1.16.0_claude-opus-4-5-20251101",
+      "after": "20251124_mini-v1.16.0_gpt-5.1-codex",
+      "n": 500,
+      "solved_before": 372,
+      "solved_after": 330,
+      "regressions": 58,
+      "improvements": 16,
+      "regression_rate": 0.15591397849462366,
+      "rate_ci95": [
+        0.1225861136393849,
+        0.19627587502818145
+      ],
+      "flip_rate": 0.148,
+      "mcnemar_p": 9.674891137601899e-07,
+      "p_holm": 6.0951814166891965e-05
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.17.1",
+      "before": "20251201_mini-v1.17.1_deepseek-v3.2-reasoner",
+      "after": "20251201_mini-v1.17.1_glm-4.6",
+      "n": 500,
+      "solved_before": 300,
+      "solved_after": 277,
+      "regressions": 75,
+      "improvements": 52,
+      "regression_rate": 0.25,
+      "rate_ci95": [
+        0.2043691149121153,
+        0.30195260008675257
+      ],
+      "flip_rate": 0.254,
+      "mcnemar_p": 0.05048700598597199,
+      "p_holm": 1.0
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.17.2",
+      "before": "20251209_mini-v1.17.2_devstral-2512",
+      "after": "20251209_mini-v1.17.2_devstral-small-2512",
+      "n": 500,
+      "solved_before": 269,
+      "solved_after": 282,
+      "regressions": 59,
+      "improvements": 72,
+      "regression_rate": 0.21933085501858737,
+      "rate_ci95": [
+        0.1740235929832559,
+        0.2725417401624227
+      ],
+      "flip_rate": 0.262,
+      "mcnemar_p": 0.2944061565235134,
+      "p_holm": 1.0
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.17.2",
+      "before": "20251209_mini-v1.17.2_devstral-2512",
+      "after": "20251210_mini-v1.17.2_kimi-k2-thinking",
+      "n": 500,
+      "solved_before": 269,
+      "solved_after": 317,
+      "regressions": 32,
+      "improvements": 80,
+      "regression_rate": 0.11895910780669144,
+      "rate_ci95": [
+        0.0855365964839166,
+        0.16311170348207094
+      ],
+      "flip_rate": 0.224,
+      "mcnemar_p": 6.566339353826234e-06,
+      "p_holm": 0.0003808476825219216
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.17.2",
+      "before": "20251209_mini-v1.17.2_devstral-2512",
+      "after": "20251211_mini-v1.17.2_gpt-5.2-2025-12-11",
+      "n": 500,
+      "solved_before": 269,
+      "solved_after": 345,
+      "regressions": 25,
+      "improvements": 101,
+      "regression_rate": 0.09293680297397769,
+      "rate_ci95": [
+        0.06374283118994653,
+        0.13359364535908408
+      ],
+      "flip_rate": 0.252,
+      "mcnemar_p": 5.027865916342065e-12,
+      "p_holm": 3.7206207780931277e-10
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.17.2",
+      "before": "20251209_mini-v1.17.2_devstral-2512",
+      "after": "20251211_mini-v1.17.2_gpt-5.2-2025-12-11-high",
+      "n": 500,
+      "solved_before": 269,
+      "solved_after": 359,
+      "regressions": 16,
+      "improvements": 106,
+      "regression_rate": 0.05947955390334572,
+      "rate_ci95": [
+        0.03693960943926015,
+        0.09442452271654013
+      ],
+      "flip_rate": 0.244,
+      "mcnemar_p": 1.8172560940408258e-17,
+      "p_holm": 1.5083225580538854e-15
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.17.2",
+      "before": "20251209_mini-v1.17.2_devstral-small-2512",
+      "after": "20251210_mini-v1.17.2_kimi-k2-thinking",
+      "n": 500,
+      "solved_before": 282,
+      "solved_after": 317,
+      "regressions": 33,
+      "improvements": 68,
+      "regression_rate": 0.11702127659574468,
+      "rate_ci95": [
+        0.08454960049025752,
+        0.15978712306572593
+      ],
+      "flip_rate": 0.202,
+      "mcnemar_p": 0.0006412485021695937,
+      "p_holm": 0.029900130833167008
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.17.2",
+      "before": "20251209_mini-v1.17.2_devstral-small-2512",
+      "after": "20251211_mini-v1.17.2_gpt-5.2-2025-12-11",
+      "n": 500,
+      "solved_before": 282,
+      "solved_after": 345,
+      "regressions": 32,
+      "improvements": 95,
+      "regression_rate": 0.11347517730496454,
+      "rate_ci95": [
+        0.08153515364767693,
+        0.15580468771901007
+      ],
+      "flip_rate": 0.254,
+      "mcnemar_p": 1.935609019546314e-08,
+      "p_holm": 1.3355702234869565e-06
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.17.2",
+      "before": "20251209_mini-v1.17.2_devstral-small-2512",
+      "after": "20251211_mini-v1.17.2_gpt-5.2-2025-12-11-high",
+      "n": 500,
+      "solved_before": 282,
+      "solved_after": 359,
+      "regressions": 21,
+      "improvements": 98,
+      "regression_rate": 0.07446808510638298,
+      "rate_ci95": [
+        0.04921935021258989,
+        0.11115478707183617
+      ],
+      "flip_rate": 0.238,
+      "mcnemar_p": 4.4033126351506443e-13,
+      "p_holm": 3.4345838554175026e-11
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.17.2",
+      "before": "20251210_mini-v1.17.2_kimi-k2-thinking",
+      "after": "20251211_mini-v1.17.2_gpt-5.2-2025-12-11",
+      "n": 500,
+      "solved_before": 317,
+      "solved_after": 345,
+      "regressions": 35,
+      "improvements": 63,
+      "regression_rate": 0.11041009463722397,
+      "rate_ci95": [
+        0.08046568430673323,
+        0.14968402196577008
+      ],
+      "flip_rate": 0.196,
+      "mcnemar_p": 0.006092629672064721,
+      "p_holm": 0.21933466819432995
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.17.2",
+      "before": "20251210_mini-v1.17.2_kimi-k2-thinking",
+      "after": "20251211_mini-v1.17.2_gpt-5.2-2025-12-11-high",
+      "n": 500,
+      "solved_before": 317,
+      "solved_after": 359,
+      "regressions": 23,
+      "improvements": 65,
+      "regression_rate": 0.07255520504731862,
+      "rate_ci95": [
+        0.0488304928100995,
+        0.10651594605568351
+      ],
+      "flip_rate": 0.176,
+      "mcnemar_p": 8.50110761369032e-06,
+      "p_holm": 0.0004845631339803483
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.17.2",
+      "before": "20251211_mini-v1.17.2_gpt-5.2-2025-12-11",
+      "after": "20251211_mini-v1.17.2_gpt-5.2-2025-12-11-high",
+      "n": 500,
+      "solved_before": 345,
+      "solved_after": 359,
+      "regressions": 20,
+      "improvements": 34,
+      "regression_rate": 0.057971014492753624,
+      "rate_ci95": [
+        0.037837043551665006,
+        0.08784062791871008
+      ],
+      "flip_rate": 0.108,
+      "mcnemar_p": 0.07590472948910143,
+      "p_holm": 1.0
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.7.0",
+      "before": "20250807_mini-v1.7.0_gpt-5",
+      "after": "20250807_mini-v1.7.0_gpt-5-mini",
+      "n": 500,
+      "solved_before": 325,
+      "solved_after": 299,
+      "regressions": 54,
+      "improvements": 28,
+      "regression_rate": 0.16615384615384615,
+      "rate_ci95": [
+        0.12963431002651615,
+        0.21047351088178737
+      ],
+      "flip_rate": 0.164,
+      "mcnemar_p": 0.00543592487756628,
+      "p_holm": 0.20112922046995235
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.7.0",
+      "before": "20250807_mini-v1.7.0_gpt-5",
+      "after": "20250807_mini-v1.7.0_gpt-5-nano",
+      "n": 500,
+      "solved_before": 325,
+      "solved_after": 174,
+      "regressions": 163,
+      "improvements": 12,
+      "regression_rate": 0.5015384615384615,
+      "rate_ci95": [
+        0.4474785816681377,
+        0.5555623961156949
+      ],
+      "flip_rate": 0.35,
+      "mcnemar_p": 5.274271474244677e-35,
+      "p_holm": 4.852329756305103e-33
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.7.0",
+      "before": "20250807_mini-v1.7.0_gpt-5",
+      "after": "20250807_mini-v1.7.0_gpt-oss-120b",
+      "n": 500,
+      "solved_before": 325,
+      "solved_after": 130,
+      "regressions": 207,
+      "improvements": 12,
+      "regression_rate": 0.6369230769230769,
+      "rate_ci95": [
+        0.5833225860263316,
+        0.6873244367347789
+      ],
+      "flip_rate": 0.438,
+      "mcnemar_p": 4.708507874893429e-47,
+      "p_holm": 4.425997402399823e-45
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.7.0",
+      "before": "20250807_mini-v1.7.0_gpt-5",
+      "after": "20250807_mini-v1.7.0_kimi-k2-instruct",
+      "n": 500,
+      "solved_before": 325,
+      "solved_after": 219,
+      "regressions": 127,
+      "improvements": 21,
+      "regression_rate": 0.39076923076923076,
+      "rate_ci95": [
+        0.33929305079861466,
+        0.44479752654926336
+      ],
+      "flip_rate": 0.296,
+      "mcnemar_p": 1.1113341249848234e-19,
+      "p_holm": 9.557473474869482e-18
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.7.0",
+      "before": "20250807_mini-v1.7.0_gpt-5-mini",
+      "after": "20250807_mini-v1.7.0_gpt-5-nano",
+      "n": 500,
+      "solved_before": 299,
+      "solved_after": 174,
+      "regressions": 144,
+      "improvements": 19,
+      "regression_rate": 0.4816053511705686,
+      "rate_ci95": [
+        0.4255620784016346,
+        0.5381153027771731
+      ],
+      "flip_rate": 0.326,
+      "mcnemar_p": 5.83635188709137e-25,
+      "p_holm": 5.311080217253147e-23
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.7.0",
+      "before": "20250807_mini-v1.7.0_gpt-5-mini",
+      "after": "20250807_mini-v1.7.0_gpt-oss-120b",
+      "n": 500,
+      "solved_before": 299,
+      "solved_after": 130,
+      "regressions": 179,
+      "improvements": 10,
+      "regression_rate": 0.5986622073578596,
+      "rate_ci95": [
+        0.5421894613461733,
+        0.6526318577856767
+      ],
+      "flip_rate": 0.378,
+      "mcnemar_p": 3.3939314642716165e-41,
+      "p_holm": 3.1563562617726034e-39
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.7.0",
+      "before": "20250807_mini-v1.7.0_gpt-5-mini",
+      "after": "20250807_mini-v1.7.0_kimi-k2-instruct",
+      "n": 500,
+      "solved_before": 299,
+      "solved_after": 219,
+      "regressions": 109,
+      "improvements": 29,
+      "regression_rate": 0.36454849498327757,
+      "rate_ci95": [
+        0.31203102535546773,
+        0.42050241787029785
+      ],
+      "flip_rate": 0.276,
+      "mcnemar_p": 4.201557931039116e-12,
+      "p_holm": 3.1511684482793366e-10
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.7.0",
+      "before": "20250807_mini-v1.7.0_gpt-5-nano",
+      "after": "20250807_mini-v1.7.0_gpt-oss-120b",
+      "n": 500,
+      "solved_before": 174,
+      "solved_after": 130,
+      "regressions": 88,
+      "improvements": 44,
+      "regression_rate": 0.5057471264367817,
+      "rate_ci95": [
+        0.43214092079925787,
+        0.5791050419001331
+      ],
+      "flip_rate": 0.264,
+      "mcnemar_p": 0.00016023534882354646,
+      "p_holm": 0.008332238138824416
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.7.0",
+      "before": "20250807_mini-v1.7.0_gpt-5-nano",
+      "after": "20250807_mini-v1.7.0_kimi-k2-instruct",
+      "n": 500,
+      "solved_before": 174,
+      "solved_after": 219,
+      "regressions": 57,
+      "improvements": 102,
+      "regression_rate": 0.3275862068965517,
+      "rate_ci95": [
+        0.2622305165890572,
+        0.40039060242921515
+      ],
+      "flip_rate": 0.318,
+      "mcnemar_p": 0.00044734751745370376,
+      "p_holm": 0.021920028355231484
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v1.7.0",
+      "before": "20250807_mini-v1.7.0_gpt-oss-120b",
+      "after": "20250807_mini-v1.7.0_kimi-k2-instruct",
+      "n": 500,
+      "solved_before": 130,
+      "solved_after": 219,
+      "regressions": 35,
+      "improvements": 124,
+      "regression_rate": 0.2692307692307692,
+      "rate_ci95": [
+        0.20041586242234705,
+        0.3512930233052593
+      ],
+      "flip_rate": 0.318,
+      "mcnemar_p": 7.159593494194069e-13,
+      "p_holm": 5.512886990529433e-11
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_claude-4-5-haiku-high",
+      "after": "20260217_mini-v2.0.0_claude-4-5-opus-high",
+      "n": 500,
+      "solved_before": 333,
+      "solved_after": 384,
+      "regressions": 11,
+      "improvements": 62,
+      "regression_rate": 0.03303303303303303,
+      "rate_ci95": [
+        0.01854323596311657,
+        0.058174129112931044
+      ],
+      "flip_rate": 0.146,
+      "mcnemar_p": 9.089007009078587e-10,
+      "p_holm": 6.453194976445797e-08
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_claude-4-5-haiku-high",
+      "after": "20260217_mini-v2.0.0_claude-4-5-sonnet-high",
+      "n": 500,
+      "solved_before": 333,
+      "solved_after": 357,
+      "regressions": 13,
+      "improvements": 37,
+      "regression_rate": 0.03903903903903904,
+      "rate_ci95": [
+        0.02295404057896276,
+        0.06563834230961157
+      ],
+      "flip_rate": 0.1,
+      "mcnemar_p": 0.000936222910851825,
+      "p_holm": 0.0411938080774803
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_claude-4-5-haiku-high",
+      "after": "20260217_mini-v2.0.0_claude-4-6-opus",
+      "n": 500,
+      "solved_before": 333,
+      "solved_after": 378,
+      "regressions": 16,
+      "improvements": 61,
+      "regression_rate": 0.04804804804804805,
+      "rate_ci95": [
+        0.029788452765862887,
+        0.07661645684150152
+      ],
+      "flip_rate": 0.154,
+      "mcnemar_p": 2.4176312825015983e-07,
+      "p_holm": 1.547284020801023e-05
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_claude-4-5-haiku-high",
+      "after": "20260217_mini-v2.0.0_deepseek-3-2-high",
+      "n": 500,
+      "solved_before": 333,
+      "solved_after": 350,
+      "regressions": 21,
+      "improvements": 38,
+      "regression_rate": 0.06306306306306306,
+      "rate_ci95": [
+        0.04161338228971422,
+        0.09447907184896696
+      ],
+      "flip_rate": 0.118,
+      "mcnemar_p": 0.036343179957053884,
+      "p_holm": 1.0
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_claude-4-5-haiku-high",
+      "after": "20260217_mini-v2.0.0_gemini-3-flash-high",
+      "n": 500,
+      "solved_before": 333,
+      "solved_after": 379,
+      "regressions": 12,
+      "improvements": 58,
+      "regression_rate": 0.036036036036036036,
+      "rate_ci95": [
+        0.02073201665566394,
+        0.06192285732664704
+      ],
+      "flip_rate": 0.14,
+      "mcnemar_p": 2.2489162308892232e-08,
+      "p_holm": 1.5292630370046718e-06
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_claude-4-5-haiku-high",
+      "after": "20260217_mini-v2.0.0_glm-5-high",
+      "n": 500,
+      "solved_before": 333,
+      "solved_after": 364,
+      "regressions": 22,
+      "improvements": 53,
+      "regression_rate": 0.06606606606606606,
+      "rate_ci95": [
+        0.0440301489627264,
+        0.09799981408221815
+      ],
+      "flip_rate": 0.15,
+      "mcnemar_p": 0.0004496479716438124,
+      "p_holm": 0.021920028355231484
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_claude-4-5-haiku-high",
+      "after": "20260217_mini-v2.0.0_gpt-5-2-high",
+      "n": 500,
+      "solved_before": 333,
+      "solved_after": 364,
+      "regressions": 24,
+      "improvements": 55,
+      "regression_rate": 0.07207207207207207,
+      "rate_ci95": [
+        0.04890711745322934,
+        0.10499786340424193
+      ],
+      "flip_rate": 0.158,
+      "mcnemar_p": 0.0006393977673643525,
+      "p_holm": 0.029900130833167008
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_claude-4-5-haiku-high",
+      "after": "20260217_mini-v2.0.0_gpt-5-mini",
+      "n": 500,
+      "solved_before": 333,
+      "solved_after": 281,
+      "regressions": 76,
+      "improvements": 24,
+      "regression_rate": 0.22822822822822822,
+      "rate_ci95": [
+        0.1864006285321318,
+        0.27625481545103414
+      ],
+      "flip_rate": 0.2,
+      "mcnemar_p": 1.8100026213029256e-07,
+      "p_holm": 1.1765017038469016e-05
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_claude-4-5-haiku-high",
+      "after": "20260217_mini-v2.0.0_kimi-k2-5-high",
+      "n": 500,
+      "solved_before": 333,
+      "solved_after": 354,
+      "regressions": 22,
+      "improvements": 43,
+      "regression_rate": 0.06606606606606606,
+      "rate_ci95": [
+        0.0440301489627264,
+        0.09799981408221815
+      ],
+      "flip_rate": 0.13,
+      "mcnemar_p": 0.012502546136489849,
+      "p_holm": 0.412584022504165
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_claude-4-5-haiku-high",
+      "after": "20260217_mini-v2.0.0_minimax-2-5-high",
+      "n": 500,
+      "solved_before": 333,
+      "solved_after": 379,
+      "regressions": 16,
+      "improvements": 62,
+      "regression_rate": 0.04804804804804805,
+      "rate_ci95": [
+        0.029788452765862887,
+        0.07661645684150152
+      ],
+      "flip_rate": 0.156,
+      "mcnemar_p": 1.5129781377543385e-07,
+      "p_holm": 9.985655709178635e-06
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_claude-4-5-haiku-high",
+      "after": "20260226_mini-v2.0.0_gemini-3-pro-high",
+      "n": 500,
+      "solved_before": 333,
+      "solved_after": 0,
+      "regressions": 333,
+      "improvements": 0,
+      "regression_rate": 1.0,
+      "rate_ci95": [
+        0.9885952328928493,
+        1.0000000000000002
+      ],
+      "flip_rate": 0.666,
+      "mcnemar_p": 1.142987391282275e-100,
+      "p_holm": 1.1658471391079205e-98
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_claude-4-5-opus-high",
+      "after": "20260217_mini-v2.0.0_claude-4-5-sonnet-high",
+      "n": 500,
+      "solved_before": 384,
+      "solved_after": 357,
+      "regressions": 38,
+      "improvements": 11,
+      "regression_rate": 0.09895833333333333,
+      "rate_ci95": [
+        0.07294783108675577,
+        0.13291353087132196
+      ],
+      "flip_rate": 0.098,
+      "mcnemar_p": 0.00014197068519905542,
+      "p_holm": 0.0075244463155499375
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_claude-4-5-opus-high",
+      "after": "20260217_mini-v2.0.0_claude-4-6-opus",
+      "n": 500,
+      "solved_before": 384,
+      "solved_after": 378,
+      "regressions": 30,
+      "improvements": 24,
+      "regression_rate": 0.078125,
+      "rate_ci95": [
+        0.05526965555924048,
+        0.10933775117588027
+      ],
+      "flip_rate": 0.108,
+      "mcnemar_p": 0.4966174353179338,
+      "p_holm": 1.0
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_claude-4-5-opus-high",
+      "after": "20260217_mini-v2.0.0_deepseek-3-2-high",
+      "n": 500,
+      "solved_before": 384,
+      "solved_after": 350,
+      "regressions": 49,
+      "improvements": 15,
+      "regression_rate": 0.12760416666666666,
+      "rate_ci95": [
+        0.09788241679433168,
+        0.1647031335953119
+      ],
+      "flip_rate": 0.128,
+      "mcnemar_p": 2.436457216293327e-05,
+      "p_holm": 0.00134005146896133
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_claude-4-5-opus-high",
+      "after": "20260217_mini-v2.0.0_gemini-3-flash-high",
+      "n": 500,
+      "solved_before": 384,
+      "solved_after": 379,
+      "regressions": 29,
+      "improvements": 24,
+      "regression_rate": 0.07552083333333333,
+      "rate_ci95": [
+        0.05309405767106901,
+        0.10635660466118212
+      ],
+      "flip_rate": 0.106,
+      "mcnemar_p": 0.5831321542611763,
+      "p_holm": 1.0
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_claude-4-5-opus-high",
+      "after": "20260217_mini-v2.0.0_glm-5-high",
+      "n": 500,
+      "solved_before": 384,
+      "solved_after": 364,
+      "regressions": 39,
+      "improvements": 19,
+      "regression_rate": 0.1015625,
+      "rate_ci95": [
+        0.07518762245203807,
+        0.1358304839089093
+      ],
+      "flip_rate": 0.116,
+      "mcnemar_p": 0.011928139715763175,
+      "p_holm": 0.40555675033594796
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_claude-4-5-opus-high",
+      "after": "20260217_mini-v2.0.0_gpt-5-2-high",
+      "n": 500,
+      "solved_before": 384,
+      "solved_after": 364,
+      "regressions": 40,
+      "improvements": 20,
+      "regression_rate": 0.10416666666666667,
+      "rate_ci95": [
+        0.07743332256171084,
+        0.13874152820210617
+      ],
+      "flip_rate": 0.12,
+      "mcnemar_p": 0.01348929373119186,
+      "p_holm": 0.4181681056669477
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_claude-4-5-opus-high",
+      "after": "20260217_mini-v2.0.0_gpt-5-mini",
+      "n": 500,
+      "solved_before": 384,
+      "solved_after": 281,
+      "regressions": 115,
+      "improvements": 12,
+      "regression_rate": 0.2994791666666667,
+      "rate_ci95": [
+        0.25583701246175483,
+        0.3470936685172841
+      ],
+      "flip_rate": 0.254,
+      "mcnemar_p": 2.8158175808425007e-22,
+      "p_holm": 2.5060776469498257e-20
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_claude-4-5-opus-high",
+      "after": "20260217_mini-v2.0.0_kimi-k2-5-high",
+      "n": 500,
+      "solved_before": 384,
+      "solved_after": 354,
+      "regressions": 43,
+      "improvements": 13,
+      "regression_rate": 0.11197916666666667,
+      "rate_ci95": [
+        0.08420402681231864,
+        0.14744105716010725
+      ],
+      "flip_rate": 0.112,
+      "mcnemar_p": 7.333218396948782e-05,
+      "p_holm": 0.003959937934352342
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_claude-4-5-opus-high",
+      "after": "20260217_mini-v2.0.0_minimax-2-5-high",
+      "n": 500,
+      "solved_before": 384,
+      "solved_after": 379,
+      "regressions": 30,
+      "improvements": 25,
+      "regression_rate": 0.078125,
+      "rate_ci95": [
+        0.05526965555924048,
+        0.10933775117588027
+      ],
+      "flip_rate": 0.11,
+      "mcnemar_p": 0.5900533317766357,
+      "p_holm": 1.0
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_claude-4-5-opus-high",
+      "after": "20260226_mini-v2.0.0_gemini-3-pro-high",
+      "n": 500,
+      "solved_before": 384,
+      "solved_after": 0,
+      "regressions": 384,
+      "improvements": 0,
+      "regression_rate": 1.0,
+      "rate_ci95": [
+        0.9900949253509681,
+        1.0
+      ],
+      "flip_rate": 0.768,
+      "mcnemar_p": 5.075883674631299e-116,
+      "p_holm": 5.634230878840741e-114
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_claude-4-5-sonnet-high",
+      "after": "20260217_mini-v2.0.0_claude-4-6-opus",
+      "n": 500,
+      "solved_before": 357,
+      "solved_after": 378,
+      "regressions": 22,
+      "improvements": 43,
+      "regression_rate": 0.06162464985994398,
+      "rate_ci95": [
+        0.04104449455962321,
+        0.09153888828758733
+      ],
+      "flip_rate": 0.13,
+      "mcnemar_p": 0.012502546136489849,
+      "p_holm": 0.412584022504165
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_claude-4-5-sonnet-high",
+      "after": "20260217_mini-v2.0.0_deepseek-3-2-high",
+      "n": 500,
+      "solved_before": 357,
+      "solved_after": 350,
+      "regressions": 31,
+      "improvements": 24,
+      "regression_rate": 0.08683473389355742,
+      "rate_ci95": [
+        0.0618474237181871,
+        0.12061934286304966
+      ],
+      "flip_rate": 0.11,
+      "mcnemar_p": 0.41875418826901556,
+      "p_holm": 1.0
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_claude-4-5-sonnet-high",
+      "after": "20260217_mini-v2.0.0_gemini-3-flash-high",
+      "n": 500,
+      "solved_before": 357,
+      "solved_after": 379,
+      "regressions": 17,
+      "improvements": 39,
+      "regression_rate": 0.047619047619047616,
+      "rate_ci95": [
+        0.02994037049975686,
+        0.07493002138410576
+      ],
+      "flip_rate": 0.112,
+      "mcnemar_p": 0.00456153274640822,
+      "p_holm": 0.17333824436351236
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_claude-4-5-sonnet-high",
+      "after": "20260217_mini-v2.0.0_glm-5-high",
+      "n": 500,
+      "solved_before": 357,
+      "solved_after": 364,
+      "regressions": 27,
+      "improvements": 34,
+      "regression_rate": 0.07563025210084033,
+      "rate_ci95": [
+        0.05249511233783686,
+        0.10780126147272157
+      ],
+      "flip_rate": 0.122,
+      "mcnemar_p": 0.4426260049464714,
+      "p_holm": 1.0
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_claude-4-5-sonnet-high",
+      "after": "20260217_mini-v2.0.0_gpt-5-2-high",
+      "n": 500,
+      "solved_before": 357,
+      "solved_after": 364,
+      "regressions": 27,
+      "improvements": 34,
+      "regression_rate": 0.07563025210084033,
+      "rate_ci95": [
+        0.05249511233783686,
+        0.10780126147272157
+      ],
+      "flip_rate": 0.122,
+      "mcnemar_p": 0.4426260049464714,
+      "p_holm": 1.0
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_claude-4-5-sonnet-high",
+      "after": "20260217_mini-v2.0.0_gpt-5-mini",
+      "n": 500,
+      "solved_before": 357,
+      "solved_after": 281,
+      "regressions": 89,
+      "improvements": 13,
+      "regression_rate": 0.24929971988795518,
+      "rate_ci95": [
+        0.20725231924931029,
+        0.29668514250676226
+      ],
+      "flip_rate": 0.204,
+      "mcnemar_p": 4.301653981910124e-15,
+      "p_holm": 3.4843397253472004e-13
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_claude-4-5-sonnet-high",
+      "after": "20260217_mini-v2.0.0_kimi-k2-5-high",
+      "n": 500,
+      "solved_before": 357,
+      "solved_after": 354,
+      "regressions": 28,
+      "improvements": 25,
+      "regression_rate": 0.0784313725490196,
+      "rate_ci95": [
+        0.054818756715191715,
+        0.1110202152880363
+      ],
+      "flip_rate": 0.106,
+      "mcnemar_p": 0.7838463022094988,
+      "p_holm": 1.0
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_claude-4-5-sonnet-high",
+      "after": "20260217_mini-v2.0.0_minimax-2-5-high",
+      "n": 500,
+      "solved_before": 357,
+      "solved_after": 379,
+      "regressions": 20,
+      "improvements": 42,
+      "regression_rate": 0.056022408963585436,
+      "rate_ci95": [
+        0.03655497614278247,
+        0.0849432103190889
+      ],
+      "flip_rate": 0.124,
+      "mcnemar_p": 0.007148733833163067,
+      "p_holm": 0.2502056841607074
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_claude-4-5-sonnet-high",
+      "after": "20260226_mini-v2.0.0_gemini-3-pro-high",
+      "n": 500,
+      "solved_before": 357,
+      "solved_after": 0,
+      "regressions": 357,
+      "improvements": 0,
+      "regression_rate": 1.0,
+      "rate_ci95": [
+        0.9893537773915203,
+        1.0
+      ],
+      "flip_rate": 0.714,
+      "mcnemar_p": 6.812735744013041e-108,
+      "p_holm": 7.153372531213693e-106
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_claude-4-6-opus",
+      "after": "20260217_mini-v2.0.0_deepseek-3-2-high",
+      "n": 500,
+      "solved_before": 378,
+      "solved_after": 350,
+      "regressions": 51,
+      "improvements": 23,
+      "regression_rate": 0.1349206349206349,
+      "rate_ci95": [
+        0.10412987722094795,
+        0.17305731244094327
+      ],
+      "flip_rate": 0.148,
+      "mcnemar_p": 0.0015162236642818612,
+      "p_holm": 0.06368139389983817
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_claude-4-6-opus",
+      "after": "20260217_mini-v2.0.0_gemini-3-flash-high",
+      "n": 500,
+      "solved_before": 378,
+      "solved_after": 379,
+      "regressions": 32,
+      "improvements": 33,
+      "regression_rate": 0.08465608465608465,
+      "rate_ci95": [
+        0.06060248439562804,
+        0.11706699949507428
+      ],
+      "flip_rate": 0.13,
+      "mcnemar_p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_claude-4-6-opus",
+      "after": "20260217_mini-v2.0.0_glm-5-high",
+      "n": 500,
+      "solved_before": 378,
+      "solved_after": 364,
+      "regressions": 43,
+      "improvements": 29,
+      "regression_rate": 0.11375661375661375,
+      "rate_ci95": [
+        0.08555851932647696,
+        0.14972647843175577
+      ],
+      "flip_rate": 0.144,
+      "mcnemar_p": 0.12491820036864003,
+      "p_holm": 1.0
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_claude-4-6-opus",
+      "after": "20260217_mini-v2.0.0_gpt-5-2-high",
+      "n": 500,
+      "solved_before": 378,
+      "solved_after": 364,
+      "regressions": 43,
+      "improvements": 29,
+      "regression_rate": 0.11375661375661375,
+      "rate_ci95": [
+        0.08555851932647696,
+        0.14972647843175577
+      ],
+      "flip_rate": 0.144,
+      "mcnemar_p": 0.12491820036864003,
+      "p_holm": 1.0
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_claude-4-6-opus",
+      "after": "20260217_mini-v2.0.0_gpt-5-mini",
+      "n": 500,
+      "solved_before": 378,
+      "solved_after": 281,
+      "regressions": 113,
+      "improvements": 16,
+      "regression_rate": 0.29894179894179895,
+      "rate_ci95": [
+        0.25500186089200005,
+        0.3469273160232444
+      ],
+      "flip_rate": 0.258,
+      "mcnemar_p": 3.636120160879614e-19,
+      "p_holm": 3.090702136747672e-17
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_claude-4-6-opus",
+      "after": "20260217_mini-v2.0.0_kimi-k2-5-high",
+      "n": 500,
+      "solved_before": 378,
+      "solved_after": 354,
+      "regressions": 45,
+      "improvements": 21,
+      "regression_rate": 0.11904761904761904,
+      "rate_ci95": [
+        0.09017232725091791,
+        0.15558821848322943
+      ],
+      "flip_rate": 0.132,
+      "mcnemar_p": 0.004272405031651673,
+      "p_holm": 0.16662379623441526
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_claude-4-6-opus",
+      "after": "20260217_mini-v2.0.0_minimax-2-5-high",
+      "n": 500,
+      "solved_before": 378,
+      "solved_after": 379,
+      "regressions": 32,
+      "improvements": 33,
+      "regression_rate": 0.08465608465608465,
+      "rate_ci95": [
+        0.06060248439562804,
+        0.11706699949507428
+      ],
+      "flip_rate": 0.13,
+      "mcnemar_p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_claude-4-6-opus",
+      "after": "20260226_mini-v2.0.0_gemini-3-pro-high",
+      "n": 500,
+      "solved_before": 378,
+      "solved_after": 0,
+      "regressions": 378,
+      "improvements": 0,
+      "regression_rate": 1.0,
+      "rate_ci95": [
+        0.9899392837239316,
+        1.0
+      ],
+      "flip_rate": 0.756,
+      "mcnemar_p": 3.248565551764031e-114,
+      "p_holm": 3.5084507959051535e-112
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_deepseek-3-2-high",
+      "after": "20260217_mini-v2.0.0_gemini-3-flash-high",
+      "n": 500,
+      "solved_before": 350,
+      "solved_after": 379,
+      "regressions": 18,
+      "improvements": 47,
+      "regression_rate": 0.05142857142857143,
+      "rate_ci95": [
+        0.03277516300525845,
+        0.0798221121596741
+      ],
+      "flip_rate": 0.13,
+      "mcnemar_p": 0.0004221303234752052,
+      "p_holm": 0.021106516173760262
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_deepseek-3-2-high",
+      "after": "20260217_mini-v2.0.0_glm-5-high",
+      "n": 500,
+      "solved_before": 350,
+      "solved_after": 364,
+      "regressions": 23,
+      "improvements": 37,
+      "regression_rate": 0.06571428571428571,
+      "rate_ci95": [
+        0.04418432506372502,
+        0.09667418337620969
+      ],
+      "flip_rate": 0.12,
+      "mcnemar_p": 0.09246098107292373,
+      "p_holm": 1.0
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_deepseek-3-2-high",
+      "after": "20260217_mini-v2.0.0_gpt-5-2-high",
+      "n": 500,
+      "solved_before": 350,
+      "solved_after": 364,
+      "regressions": 21,
+      "improvements": 35,
+      "regression_rate": 0.06,
+      "rate_ci95": [
+        0.039574918040058235,
+        0.08997909708987557
+      ],
+      "flip_rate": 0.112,
+      "mcnemar_p": 0.08142681460950621,
+      "p_holm": 1.0
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_deepseek-3-2-high",
+      "after": "20260217_mini-v2.0.0_gpt-5-mini",
+      "n": 500,
+      "solved_before": 350,
+      "solved_after": 281,
+      "regressions": 91,
+      "improvements": 22,
+      "regression_rate": 0.26,
+      "rate_ci95": [
+        0.216827430733608,
+        0.30838385024635584
+      ],
+      "flip_rate": 0.226,
+      "mcnemar_p": 3.69703787625371e-11,
+      "p_holm": 2.6988376496652084e-09
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_deepseek-3-2-high",
+      "after": "20260217_mini-v2.0.0_kimi-k2-5-high",
+      "n": 500,
+      "solved_before": 350,
+      "solved_after": 354,
+      "regressions": 29,
+      "improvements": 33,
+      "regression_rate": 0.08285714285714285,
+      "rate_ci95": [
+        0.058307800368703394,
+        0.11646418800123384
+      ],
+      "flip_rate": 0.124,
+      "mcnemar_p": 0.7035366713552734,
+      "p_holm": 1.0
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_deepseek-3-2-high",
+      "after": "20260217_mini-v2.0.0_minimax-2-5-high",
+      "n": 500,
+      "solved_before": 350,
+      "solved_after": 379,
+      "regressions": 20,
+      "improvements": 49,
+      "regression_rate": 0.05714285714285714,
+      "rate_ci95": [
+        0.037292075945596956,
+        0.08660969252933645
+      ],
+      "flip_rate": 0.138,
+      "mcnemar_p": 0.0006361729964503618,
+      "p_holm": 0.029900130833167008
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_deepseek-3-2-high",
+      "after": "20260226_mini-v2.0.0_gemini-3-pro-high",
+      "n": 500,
+      "solved_before": 350,
+      "solved_after": 0,
+      "regressions": 350,
+      "improvements": 0,
+      "regression_rate": 1.0,
+      "rate_ci95": [
+        0.989143164625075,
+        0.9999999999999998
+      ],
+      "flip_rate": 0.7,
+      "mcnemar_p": 8.720301752336693e-106,
+      "p_holm": 8.981910804906793e-104
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_gemini-3-flash-high",
+      "after": "20260217_mini-v2.0.0_glm-5-high",
+      "n": 500,
+      "solved_before": 379,
+      "solved_after": 364,
+      "regressions": 36,
+      "improvements": 21,
+      "regression_rate": 0.09498680738786279,
+      "rate_ci95": [
+        0.06940092475419658,
+        0.12870084892974998
+      ],
+      "flip_rate": 0.114,
+      "mcnemar_p": 0.0627366803558285,
+      "p_holm": 1.0
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_gemini-3-flash-high",
+      "after": "20260217_mini-v2.0.0_gpt-5-2-high",
+      "n": 500,
+      "solved_before": 379,
+      "solved_after": 364,
+      "regressions": 37,
+      "improvements": 22,
+      "regression_rate": 0.09762532981530343,
+      "rate_ci95": [
+        0.07165822983771868,
+        0.13166763652581132
+      ],
+      "flip_rate": 0.118,
+      "mcnemar_p": 0.06744461190078899,
+      "p_holm": 1.0
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_gemini-3-flash-high",
+      "after": "20260217_mini-v2.0.0_gpt-5-mini",
+      "n": 500,
+      "solved_before": 379,
+      "solved_after": 281,
+      "regressions": 109,
+      "improvements": 11,
+      "regression_rate": 0.287598944591029,
+      "rate_ci95": [
+        0.2443380218507984,
+        0.33512251744273713
+      ],
+      "flip_rate": 0.24,
+      "mcnemar_p": 1.938132755385024e-21,
+      "p_holm": 1.705556824738821e-19
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_gemini-3-flash-high",
+      "after": "20260217_mini-v2.0.0_kimi-k2-5-high",
+      "n": 500,
+      "solved_before": 379,
+      "solved_after": 354,
+      "regressions": 45,
+      "improvements": 20,
+      "regression_rate": 0.11873350923482849,
+      "rate_ci95": [
+        0.08993111511890661,
+        0.15518749268129065
+      ],
+      "flip_rate": 0.13,
+      "mcnemar_p": 0.0026263768106840383,
+      "p_holm": 0.10505507242736153
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_gemini-3-flash-high",
+      "after": "20260217_mini-v2.0.0_minimax-2-5-high",
+      "n": 500,
+      "solved_before": 379,
+      "solved_after": 379,
+      "regressions": 28,
+      "improvements": 28,
+      "regression_rate": 0.07387862796833773,
+      "rate_ci95": [
+        0.05160559530072447,
+        0.10470343694655483
+      ],
+      "flip_rate": 0.112,
+      "mcnemar_p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_gemini-3-flash-high",
+      "after": "20260226_mini-v2.0.0_gemini-3-pro-high",
+      "n": 500,
+      "solved_before": 379,
+      "solved_after": 0,
+      "regressions": 379,
+      "improvements": 0,
+      "regression_rate": 1.0,
+      "rate_ci95": [
+        0.9899655627810562,
+        1.0
+      ],
+      "flip_rate": 0.758,
+      "mcnemar_p": 1.6242827758820155e-114,
+      "p_holm": 1.786711053470217e-112
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_glm-5-high",
+      "after": "20260217_mini-v2.0.0_gpt-5-2-high",
+      "n": 500,
+      "solved_before": 364,
+      "solved_after": 364,
+      "regressions": 29,
+      "improvements": 29,
+      "regression_rate": 0.07967032967032966,
+      "rate_ci95": [
+        0.05604174998700114,
+        0.11207844087776239
+      ],
+      "flip_rate": 0.116,
+      "mcnemar_p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_glm-5-high",
+      "after": "20260217_mini-v2.0.0_gpt-5-mini",
+      "n": 500,
+      "solved_before": 364,
+      "solved_after": 281,
+      "regressions": 101,
+      "improvements": 18,
+      "regression_rate": 0.2774725274725275,
+      "rate_ci95": [
+        0.2339799853466004,
+        0.3256130568759215
+      ],
+      "flip_rate": 0.238,
+      "mcnemar_p": 3.3657704323663983e-15,
+      "p_holm": 2.7599317545404464e-13
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_glm-5-high",
+      "after": "20260217_mini-v2.0.0_kimi-k2-5-high",
+      "n": 500,
+      "solved_before": 364,
+      "solved_after": 354,
+      "regressions": 38,
+      "improvements": 28,
+      "regression_rate": 0.1043956043956044,
+      "rate_ci95": [
+        0.0770070117945534,
+        0.14004728548992995
+      ],
+      "flip_rate": 0.132,
+      "mcnemar_p": 0.267811664846587,
+      "p_holm": 1.0
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_glm-5-high",
+      "after": "20260217_mini-v2.0.0_minimax-2-5-high",
+      "n": 500,
+      "solved_before": 364,
+      "solved_after": 379,
+      "regressions": 26,
+      "improvements": 41,
+      "regression_rate": 0.07142857142857142,
+      "rate_ci95": [
+        0.04920754600498739,
+        0.10260127605320288
+      ],
+      "flip_rate": 0.134,
+      "mcnemar_p": 0.08643723427347086,
+      "p_holm": 1.0
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_glm-5-high",
+      "after": "20260226_mini-v2.0.0_gemini-3-pro-high",
+      "n": 500,
+      "solved_before": 364,
+      "solved_after": 0,
+      "regressions": 364,
+      "improvements": 0,
+      "regression_rate": 1.0,
+      "rate_ci95": [
+        0.9895563742654447,
+        1.0000000000000002
+      ],
+      "flip_rate": 0.728,
+      "mcnemar_p": 5.3224498000101884e-110,
+      "p_holm": 5.6950212860109016e-108
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_gpt-5-2-high",
+      "after": "20260217_mini-v2.0.0_gpt-5-mini",
+      "n": 500,
+      "solved_before": 364,
+      "solved_after": 281,
+      "regressions": 102,
+      "improvements": 19,
+      "regression_rate": 0.2802197802197802,
+      "rate_ci95": [
+        0.23656170632022466,
+        0.32846845883782166
+      ],
+      "flip_rate": 0.242,
+      "mcnemar_p": 6.364983531202538e-15,
+      "p_holm": 5.091986824962031e-13
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_gpt-5-2-high",
+      "after": "20260217_mini-v2.0.0_kimi-k2-5-high",
+      "n": 500,
+      "solved_before": 364,
+      "solved_after": 354,
+      "regressions": 42,
+      "improvements": 32,
+      "regression_rate": 0.11538461538461539,
+      "rate_ci95": [
+        0.0865057124453206,
+        0.15229707658126043
+      ],
+      "flip_rate": 0.148,
+      "mcnemar_p": 0.29541328065567013,
+      "p_holm": 1.0
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_gpt-5-2-high",
+      "after": "20260217_mini-v2.0.0_minimax-2-5-high",
+      "n": 500,
+      "solved_before": 364,
+      "solved_after": 379,
+      "regressions": 28,
+      "improvements": 43,
+      "regression_rate": 0.07692307692307693,
+      "rate_ci95": [
+        0.05375381955433606,
+        0.10892924837490307
+      ],
+      "flip_rate": 0.142,
+      "mcnemar_p": 0.09592363141082376,
+      "p_holm": 1.0
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_gpt-5-2-high",
+      "after": "20260226_mini-v2.0.0_gemini-3-pro-high",
+      "n": 500,
+      "solved_before": 364,
+      "solved_after": 0,
+      "regressions": 364,
+      "improvements": 0,
+      "regression_rate": 1.0,
+      "rate_ci95": [
+        0.9895563742654447,
+        1.0000000000000002
+      ],
+      "flip_rate": 0.728,
+      "mcnemar_p": 5.3224498000101884e-110,
+      "p_holm": 5.6950212860109016e-108
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_gpt-5-mini",
+      "after": "20260217_mini-v2.0.0_kimi-k2-5-high",
+      "n": 500,
+      "solved_before": 281,
+      "solved_after": 354,
+      "regressions": 15,
+      "improvements": 88,
+      "regression_rate": 0.05338078291814947,
+      "rate_ci95": [
+        0.03261269740863613,
+        0.08619579123908948
+      ],
+      "flip_rate": 0.206,
+      "mcnemar_p": 9.654706383228214e-14,
+      "p_holm": 7.627218042750289e-12
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_gpt-5-mini",
+      "after": "20260217_mini-v2.0.0_minimax-2-5-high",
+      "n": 500,
+      "solved_before": 281,
+      "solved_after": 379,
+      "regressions": 13,
+      "improvements": 111,
+      "regression_rate": 0.046263345195729534,
+      "rate_ci95": [
+        0.02723272513837907,
+        0.0775328708981549
+      ],
+      "flip_rate": 0.248,
+      "mcnemar_p": 1.4575322761455106e-20,
+      "p_holm": 1.2680530802465942e-18
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_gpt-5-mini",
+      "after": "20260226_mini-v2.0.0_gemini-3-pro-high",
+      "n": 500,
+      "solved_before": 281,
+      "solved_after": 0,
+      "regressions": 281,
+      "improvements": 0,
+      "regression_rate": 1.0,
+      "rate_ci95": [
+        0.9865132059362116,
+        1.0
+      ],
+      "flip_rate": 0.562,
+      "mcnemar_p": 5.147557589468029e-85,
+      "p_holm": 5.147557589468029e-83
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_kimi-k2-5-high",
+      "after": "20260217_mini-v2.0.0_minimax-2-5-high",
+      "n": 500,
+      "solved_before": 354,
+      "solved_after": 379,
+      "regressions": 16,
+      "improvements": 41,
+      "regression_rate": 0.04519774011299435,
+      "rate_ci95": [
+        0.028009295200179016,
+        0.07215122274966247
+      ],
+      "flip_rate": 0.114,
+      "mcnemar_p": 0.0012635594724354632,
+      "p_holm": 0.05433305731472492
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_kimi-k2-5-high",
+      "after": "20260226_mini-v2.0.0_gemini-3-pro-high",
+      "n": 500,
+      "solved_before": 354,
+      "solved_after": 0,
+      "regressions": 354,
+      "improvements": 0,
+      "regression_rate": 1.0,
+      "rate_ci95": [
+        0.9892645237445842,
+        1.0
+      ],
+      "flip_rate": 0.708,
+      "mcnemar_p": 5.450188595210433e-107,
+      "p_holm": 5.66819613901885e-105
+    },
+    {
+      "category": "M",
+      "label": "model change within mini-SWE-agent v2.0.0",
+      "before": "20260217_mini-v2.0.0_minimax-2-5-high",
+      "after": "20260226_mini-v2.0.0_gemini-3-pro-high",
+      "n": 500,
+      "solved_before": 379,
+      "solved_after": 0,
+      "regressions": 379,
+      "improvements": 0,
+      "regression_rate": 1.0,
+      "rate_ci95": [
+        0.9899655627810562,
+        1.0
+      ],
+      "flip_rate": 0.758,
+      "mcnemar_p": 1.6242827758820155e-114,
+      "p_holm": 1.786711053470217e-112
+    },
+    {
+      "category": "H",
+      "label": "gpt-5-mini",
+      "before": "20250807_mini-v1.7.0_gpt-5-mini",
+      "after": "20260217_mini-v2.0.0_gpt-5-mini",
+      "n": 500,
+      "solved_before": 299,
+      "solved_after": 281,
+      "regressions": 51,
+      "improvements": 33,
+      "regression_rate": 0.1705685618729097,
+      "rate_ci95": [
+        0.13217871429005584,
+        0.21731620318495423
+      ],
+      "flip_rate": 0.168,
+      "mcnemar_p": 0.06297225703616971,
+      "p_holm": 0.31486128518084855
+    },
+    {
+      "category": "H",
+      "label": "gpt-5.2 (high)",
+      "before": "20251211_mini-v1.17.2_gpt-5.2-2025-12-11-high",
+      "after": "20260217_mini-v2.0.0_gpt-5-2-high",
+      "n": 500,
+      "solved_before": 359,
+      "solved_after": 364,
+      "regressions": 28,
+      "improvements": 33,
+      "regression_rate": 0.07799442896935933,
+      "rate_ci95": [
+        0.054510206619006525,
+        0.11041465315451447
+      ],
+      "flip_rate": 0.122,
+      "mcnemar_p": 0.6089207154048287,
+      "p_holm": 1.0
+    },
+    {
+      "category": "H",
+      "label": "gpt-5",
+      "before": "20250929_Prometheus_v1.2_gpt5",
+      "after": "20251015_Prometheus_v1.2.1_gpt5",
+      "n": 500,
+      "solved_before": 356,
+      "solved_after": 372,
+      "regressions": 0,
+      "improvements": 16,
+      "regression_rate": 0.0,
+      "rate_ci95": [
+        0.0,
+        0.01067580846683652
+      ],
+      "flip_rate": 0.032,
+      "mcnemar_p": 3.0517578125e-05,
+      "p_holm": 0.000457763671875
+    },
+    {
+      "category": "H",
+      "label": "gpt-5",
+      "before": "20250807_mini-v1.7.0_gpt-5",
+      "after": "20250807_openhands_gpt5",
+      "n": 500,
+      "solved_before": 325,
+      "solved_after": 359,
+      "regressions": 16,
+      "improvements": 50,
+      "regression_rate": 0.04923076923076923,
+      "rate_ci95": [
+        0.030527160153552297,
+        0.07846634918346587
+      ],
+      "flip_rate": 0.132,
+      "mcnemar_p": 3.328235017032062e-05,
+      "p_holm": 0.0004659529023844887
+    },
+    {
+      "category": "H",
+      "label": "Claude Sonnet 4",
+      "before": "20250726_mini-v1.0.0_claude-sonnet-4-20250514",
+      "after": "20250522_sweagent_claude-4-sonnet-20250514",
+      "n": 500,
+      "solved_before": 324,
+      "solved_after": 333,
+      "regressions": 32,
+      "improvements": 41,
+      "regression_rate": 0.09876543209876543,
+      "rate_ci95": [
+        0.07083084970888814,
+        0.13610323065187144
+      ],
+      "flip_rate": 0.146,
+      "mcnemar_p": 0.3491818381705883,
+      "p_holm": 1.0
+    },
+    {
+      "category": "H",
+      "label": "Claude Sonnet 4",
+      "before": "20250726_mini-v1.0.0_claude-sonnet-4-20250514",
+      "after": "20250524_openhands_claude_4_sonnet",
+      "n": 500,
+      "solved_before": 324,
+      "solved_after": 352,
+      "regressions": 22,
+      "improvements": 50,
+      "regression_rate": 0.06790123456790123,
+      "rate_ci95": [
+        0.0452649130790305,
+        0.10066409654024903
+      ],
+      "flip_rate": 0.144,
+      "mcnemar_p": 0.0012935849626762883,
+      "p_holm": 0.012935849626762882
+    },
+    {
+      "category": "H",
+      "label": "Claude Sonnet 4",
+      "before": "20250726_mini-v1.0.0_claude-sonnet-4-20250514",
+      "after": "20250611_moatless_claude-4-sonnet-20250514",
+      "n": 500,
+      "solved_before": 324,
+      "solved_after": 354,
+      "regressions": 19,
+      "improvements": 49,
+      "regression_rate": 0.05864197530864197,
+      "rate_ci95": [
+        0.037859765907923254,
+        0.08976772248891227
+      ],
+      "flip_rate": 0.136,
+      "mcnemar_p": 0.0003579552716131653,
+      "p_holm": 0.004295463259357984
+    },
+    {
+      "category": "H",
+      "label": "Claude Sonnet 4",
+      "before": "20250522_sweagent_claude-4-sonnet-20250514",
+      "after": "20250524_openhands_claude_4_sonnet",
+      "n": 500,
+      "solved_before": 333,
+      "solved_after": 352,
+      "regressions": 27,
+      "improvements": 46,
+      "regression_rate": 0.08108108108108109,
+      "rate_ci95": [
+        0.056319619611623274,
+        0.1153978879646381
+      ],
+      "flip_rate": 0.146,
+      "mcnemar_p": 0.034415913668175036,
+      "p_holm": 0.24091139567722525
+    },
+    {
+      "category": "H",
+      "label": "Claude Sonnet 4",
+      "before": "20250522_sweagent_claude-4-sonnet-20250514",
+      "after": "20250611_moatless_claude-4-sonnet-20250514",
+      "n": 500,
+      "solved_before": 333,
+      "solved_after": 354,
+      "regressions": 22,
+      "improvements": 43,
+      "regression_rate": 0.06606606606606606,
+      "rate_ci95": [
+        0.0440301489627264,
+        0.09799981408221815
+      ],
+      "flip_rate": 0.13,
+      "mcnemar_p": 0.012502546136489849,
+      "p_holm": 0.11252291522840864
+    },
+    {
+      "category": "H",
+      "label": "Claude Sonnet 4",
+      "before": "20250524_openhands_claude_4_sonnet",
+      "after": "20250611_moatless_claude-4-sonnet-20250514",
+      "n": 500,
+      "solved_before": 352,
+      "solved_after": 354,
+      "regressions": 33,
+      "improvements": 35,
+      "regression_rate": 0.09375,
+      "rate_ci95": [
+        0.06753420202738837,
+        0.12873739747081533
+      ],
+      "flip_rate": 0.136,
+      "mcnemar_p": 0.9035973456835125,
+      "p_holm": 1.0
+    },
+    {
+      "category": "H",
+      "label": "Claude Opus 4.5",
+      "before": "20251124_mini-v1.16.0_claude-opus-4-5-20251101",
+      "after": "20251127_openhands_claude-opus-4-5",
+      "n": 500,
+      "solved_before": 372,
+      "solved_after": 388,
+      "regressions": 18,
+      "improvements": 34,
+      "regression_rate": 0.04838709677419355,
+      "rate_ci95": [
+        0.03082307028115908,
+        0.07518328984502175
+      ],
+      "flip_rate": 0.104,
+      "mcnemar_p": 0.03648340000835981,
+      "p_holm": 0.24091139567722525
+    },
+    {
+      "category": "H",
+      "label": "Claude Opus 4.5",
+      "before": "20251124_mini-v1.16.0_claude-opus-4-5-20251101",
+      "after": "20251215_livesweagent_claude-opus-4-5",
+      "n": 500,
+      "solved_before": 372,
+      "solved_after": 396,
+      "regressions": 11,
+      "improvements": 35,
+      "regression_rate": 0.02956989247311828,
+      "rate_ci95": [
+        0.016589913446360433,
+        0.05216671168507793
+      ],
+      "flip_rate": 0.092,
+      "mcnemar_p": 0.0005355850721002753,
+      "p_holm": 0.005891435793103028
+    },
+    {
+      "category": "H",
+      "label": "Claude Opus 4.5",
+      "before": "20251127_openhands_claude-opus-4-5",
+      "after": "20251215_livesweagent_claude-opus-4-5",
+      "n": 500,
+      "solved_before": 388,
+      "solved_after": 396,
+      "regressions": 10,
+      "improvements": 18,
+      "regression_rate": 0.02577319587628866,
+      "rate_ci95": [
+        0.01405841861366495,
+        0.0467865758943199
+      ],
+      "flip_rate": 0.056,
+      "mcnemar_p": 0.1849333420395851,
+      "p_holm": 0.7397333681583405
+    },
+    {
+      "category": "H",
+      "label": "Kimi K2",
+      "before": "20250807_mini-v1.7.0_kimi-k2-instruct",
+      "after": "20250716_openhands_kimi_k2",
+      "n": 500,
+      "solved_before": 219,
+      "solved_after": 327,
+      "regressions": 11,
+      "improvements": 119,
+      "regression_rate": 0.0502283105022831,
+      "rate_ci95": [
+        0.028274743425381863,
+        0.08768924175512303
+      ],
+      "flip_rate": 0.26,
+      "mcnemar_p": 4.6966135406816054e-24,
+      "p_holm": 7.984243019158729e-23
+    },
+    {
+      "category": "H",
+      "label": "Kimi K2",
+      "before": "20250807_mini-v1.7.0_kimi-k2-instruct",
+      "after": "20250804_codesweep_sweagent_kimi_k2_instruct",
+      "n": 500,
+      "solved_before": 219,
+      "solved_after": 267,
+      "regressions": 44,
+      "improvements": 92,
+      "regression_rate": 0.2009132420091324,
+      "rate_ci95": [
+        0.15320829173942566,
+        0.25893019586791516
+      ],
+      "flip_rate": 0.272,
+      "mcnemar_p": 4.709670527950416e-05,
+      "p_holm": 0.0006122571686335541
+    },
+    {
+      "category": "H",
+      "label": "Qwen3-Coder-480B",
+      "before": "20250802_mini-v1.0.0_qwen3-coder-480b-a35b-instruct",
+      "after": "20250805_openhands-Qwen3-Coder-480B-A35B-Instruct",
+      "n": 500,
+      "solved_before": 277,
+      "solved_after": 348,
+      "regressions": 21,
+      "improvements": 92,
+      "regression_rate": 0.07581227436823104,
+      "rate_ci95": [
+        0.05011745138343537,
+        0.11311192773988539
+      ],
+      "flip_rate": 0.226,
+      "mcnemar_p": 8.693348236202687e-12,
+      "p_holm": 1.39093571779243e-10
+    },
+    {
+      "category": "H",
+      "label": "Gemini 3 Pro (preview)",
+      "before": "20251118_mini-v1.15.0_gemini-3-pro-preview-20251118",
+      "after": "20251120_livesweagent_gemini-3-pro-preview",
+      "n": 500,
+      "solved_before": 371,
+      "solved_after": 387,
+      "regressions": 11,
+      "improvements": 27,
+      "regression_rate": 0.029649595687331536,
+      "rate_ci95": [
+        0.016634843910449514,
+        0.05230520970152952
+      ],
+      "flip_rate": 0.076,
+      "mcnemar_p": 0.013852965261321515,
+      "p_holm": 0.11252291522840864
+    },
+    {
+      "category": "C",
+      "label": "gpt-5.2 reasoning default -> high",
+      "before": "20251211_mini-v1.17.2_gpt-5.2-2025-12-11",
+      "after": "20251211_mini-v1.17.2_gpt-5.2-2025-12-11-high",
+      "n": 500,
+      "solved_before": 345,
+      "solved_after": 359,
+      "regressions": 20,
+      "improvements": 34,
+      "regression_rate": 0.057971014492753624,
+      "rate_ci95": [
+        0.037837043551665006,
+        0.08784062791871008
+      ],
+      "flip_rate": 0.108,
+      "mcnemar_p": 0.07590472948910143,
+      "p_holm": 0.07590472948910143
+    },
+    {
+      "category": "N-regrade",
+      "label": "same submission on Lite and Verified",
+      "before": "20231010_rag_claude2",
+      "after": "20231010_rag_claude2",
+      "n": 93,
+      "solved_before": 7,
+      "solved_after": 7,
+      "regressions": 0,
+      "improvements": 0,
+      "regression_rate": 0.0,
+      "rate_ci95": [
+        0.0,
+        0.35433884297520657
+      ],
+      "flip_rate": 0.0,
+      "mcnemar_p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "category": "N-regrade",
+      "label": "same submission on Lite and Verified",
+      "before": "20231010_rag_gpt35",
+      "after": "20231010_rag_gpt35",
+      "n": 93,
+      "solved_before": 1,
+      "solved_after": 1,
+      "regressions": 0,
+      "improvements": 0,
+      "regression_rate": 0.0,
+      "rate_ci95": [
+        0.0,
+        0.7934567085261071
+      ],
+      "flip_rate": 0.0,
+      "mcnemar_p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "category": "N-regrade",
+      "label": "same submission on Lite and Verified",
+      "before": "20231010_rag_swellama13b",
+      "after": "20231010_rag_swellama13b",
+      "n": 93,
+      "solved_before": 1,
+      "solved_after": 1,
+      "regressions": 0,
+      "improvements": 0,
+      "regression_rate": 0.0,
+      "rate_ci95": [
+        0.0,
+        0.7934567085261071
+      ],
+      "flip_rate": 0.0,
+      "mcnemar_p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "category": "N-regrade",
+      "label": "same submission on Lite and Verified",
+      "before": "20231010_rag_swellama7b",
+      "after": "20231010_rag_swellama7b",
+      "n": 93,
+      "solved_before": 1,
+      "solved_after": 1,
+      "regressions": 0,
+      "improvements": 0,
+      "regression_rate": 0.0,
+      "rate_ci95": [
+        0.0,
+        0.7934567085261071
+      ],
+      "flip_rate": 0.0,
+      "mcnemar_p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "category": "N-regrade",
+      "label": "same submission on Lite and Verified",
+      "before": "20240402_rag_claude3opus",
+      "after": "20240402_rag_claude3opus",
+      "n": 93,
+      "solved_before": 8,
+      "solved_after": 8,
+      "regressions": 0,
+      "improvements": 0,
+      "regression_rate": 0.0,
+      "rate_ci95": [
+        0.0,
+        0.3244156195108769
+      ],
+      "flip_rate": 0.0,
+      "mcnemar_p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "category": "N-regrade",
+      "label": "same submission on Lite and Verified",
+      "before": "20240402_rag_gpt4",
+      "after": "20240402_rag_gpt4",
+      "n": 93,
+      "solved_before": 4,
+      "solved_after": 4,
+      "regressions": 0,
+      "improvements": 0,
+      "regression_rate": 0.0,
+      "rate_ci95": [
+        0.0,
+        0.48990002040399916
+      ],
+      "flip_rate": 0.0,
+      "mcnemar_p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "category": "N-rerun",
+      "label": "same submission on Lite and Verified",
+      "before": "20240402_sweagent_claude3opus",
+      "after": "20240402_sweagent_claude3opus",
+      "n": 93,
+      "solved_before": 16,
+      "solved_after": 14,
+      "regressions": 8,
+      "improvements": 6,
+      "regression_rate": 0.5,
+      "rate_ci95": [
+        0.2799923761135083,
+        0.7200076238864918
+      ],
+      "flip_rate": 0.15053763440860216,
+      "mcnemar_p": 0.79052734375,
+      "p_holm": 1.0
+    },
+    {
+      "category": "N-regrade",
+      "label": "same submission on Lite and Verified",
+      "before": "20240402_sweagent_gpt4",
+      "after": "20240402_sweagent_gpt4",
+      "n": 93,
+      "solved_before": 25,
+      "solved_after": 25,
+      "regressions": 0,
+      "improvements": 0,
+      "regression_rate": 0.0,
+      "rate_ci95": [
+        0.0,
+        0.13319649395317873
+      ],
+      "flip_rate": 0.0,
+      "mcnemar_p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "category": "N-regrade",
+      "label": "same submission on Lite and Verified",
+      "before": "20240509_amazon-q-developer-agent-20240430-dev",
+      "after": "20240509_amazon-q-developer-agent-20240430-dev",
+      "n": 93,
+      "solved_before": 27,
+      "solved_after": 27,
+      "regressions": 0,
+      "improvements": 0,
+      "regression_rate": 0.0,
+      "rate_ci95": [
+        1.2149183920775522e-17,
+        0.1245590371446358
+      ],
+      "flip_rate": 0.0,
+      "mcnemar_p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "category": "N-rerun",
+      "label": "same submission on Lite and Verified",
+      "before": "20240612_MASAI_gpt4o",
+      "after": "20240612_MASAI_gpt4o",
+      "n": 93,
+      "solved_before": 42,
+      "solved_after": 38,
+      "regressions": 12,
+      "improvements": 8,
+      "regression_rate": 0.2857142857142857,
+      "rate_ci95": [
+        0.1716685874457567,
+        0.43567496077245566
+      ],
+      "flip_rate": 0.21505376344086022,
+      "mcnemar_p": 0.5034446716308594,
+      "p_holm": 1.0
+    },
+    {
+      "category": "N-rerun",
+      "label": "same submission on Lite and Verified",
+      "before": "20240615_appmap-navie_gpt4o",
+      "after": "20240615_appmap-navie_gpt4o",
+      "n": 93,
+      "solved_before": 30,
+      "solved_after": 23,
+      "regressions": 12,
+      "improvements": 5,
+      "regression_rate": 0.4,
+      "rate_ci95": [
+        0.24590394326083398,
+        0.5767994750172617
+      ],
+      "flip_rate": 0.1827956989247312,
+      "mcnemar_p": 0.143463134765625,
+      "p_holm": 1.0
+    },
+    {
+      "category": "N-rerun",
+      "label": "same submission on Lite and Verified",
+      "before": "20240617_factory_code_droid",
+      "after": "20240617_factory_code_droid",
+      "n": 93,
+      "solved_before": 43,
+      "solved_after": 44,
+      "regressions": 8,
+      "improvements": 9,
+      "regression_rate": 0.18604651162790697,
+      "rate_ci95": [
+        0.09741635580105981,
+        0.3261729323530596
+      ],
+      "flip_rate": 0.1827956989247312,
+      "mcnemar_p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "category": "N-regrade",
+      "label": "same submission on Lite and Verified",
+      "before": "20240620_sweagent_claude3.5sonnet",
+      "after": "20240620_sweagent_claude3.5sonnet",
+      "n": 93,
+      "solved_before": 36,
+      "solved_after": 36,
+      "regressions": 0,
+      "improvements": 0,
+      "regression_rate": 0.0,
+      "rate_ci95": [
+        0.0,
+        0.09642183044857634
+      ],
+      "flip_rate": 0.0,
+      "mcnemar_p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "category": "N-regrade",
+      "label": "same submission on Lite and Verified",
+      "before": "20240721_amazon-q-developer-agent-20240719-dev",
+      "after": "20240721_amazon-q-developer-agent-20240719-dev",
+      "n": 93,
+      "solved_before": 42,
+      "solved_after": 42,
+      "regressions": 0,
+      "improvements": 0,
+      "regression_rate": 0.0,
+      "rate_ci95": [
+        0.0,
+        0.08380161250916197
+      ],
+      "flip_rate": 0.0,
+      "mcnemar_p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "category": "N-regrade",
+      "label": "same submission on Lite and Verified",
+      "before": "20240728_sweagent_gpt4o",
+      "after": "20240728_sweagent_gpt4o",
+      "n": 93,
+      "solved_before": 26,
+      "solved_after": 26,
+      "regressions": 0,
+      "improvements": 0,
+      "regression_rate": 0.0,
+      "rate_ci95": [
+        0.0,
+        0.12873304380462175
+      ],
+      "flip_rate": 0.0,
+      "mcnemar_p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "category": "N-regrade",
+      "label": "same submission on Lite and Verified",
+      "before": "20240820_honeycomb",
+      "after": "20240820_honeycomb",
+      "n": 93,
+      "solved_before": 47,
+      "solved_after": 47,
+      "regressions": 0,
+      "improvements": 0,
+      "regression_rate": 0.0,
+      "rate_ci95": [
+        6.414589892600543e-18,
+        0.0755601711983887
+      ],
+      "flip_rate": 0.0,
+      "mcnemar_p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "category": "N-rerun",
+      "label": "same submission on Lite and Verified",
+      "before": "20241028_agentless-1.5_gpt4o",
+      "after": "20241028_agentless-1.5_gpt4o",
+      "n": 93,
+      "solved_before": 49,
+      "solved_after": 42,
+      "regressions": 9,
+      "improvements": 2,
+      "regression_rate": 0.1836734693877551,
+      "rate_ci95": [
+        0.09976228838458356,
+        0.31357871567282575
+      ],
+      "flip_rate": 0.11827956989247312,
+      "mcnemar_p": 0.0654296875,
+      "p_holm": 0.7197265625
+    },
+    {
+      "category": "N-rerun",
+      "label": "same submission on Lite and Verified",
+      "before": "20241128_SWE-Fixer_Qwen2.5-7b-retriever_Qwen2.5-72b-editor_20241128",
+      "after": "20241128_SWE-Fixer_Qwen2.5-7b-retriever_Qwen2.5-72b-editor_20241128",
+      "n": 93,
+      "solved_before": 36,
+      "solved_after": 34,
+      "regressions": 2,
+      "improvements": 0,
+      "regression_rate": 0.05555555555555555,
+      "rate_ci95": [
+        0.015369663767066846,
+        0.18144974107611211
+      ],
+      "flip_rate": 0.021505376344086023,
+      "mcnemar_p": 0.5,
+      "p_holm": 1.0
+    },
+    {
+      "category": "N-rerun",
+      "label": "same submission on Lite and Verified",
+      "before": "20241202_agentless-1.5_claude-3.5-sonnet-20241022",
+      "after": "20241202_agentless-1.5_claude-3.5-sonnet-20241022",
+      "n": 93,
+      "solved_before": 54,
+      "solved_after": 53,
+      "regressions": 3,
+      "improvements": 2,
+      "regression_rate": 0.05555555555555555,
+      "rate_ci95": [
+        0.019072922503838914,
+        0.15107451463482943
+      ],
+      "flip_rate": 0.053763440860215055,
+      "mcnemar_p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "category": "N-regrade",
+      "label": "same submission on Lite and Verified",
+      "before": "20241208_gru",
+      "after": "20241208_gru",
+      "n": 93,
+      "solved_before": 70,
+      "solved_after": 70,
+      "regressions": 0,
+      "improvements": 0,
+      "regression_rate": 0.0,
+      "rate_ci95": [
+        0.0,
+        0.05202487486728348
+      ],
+      "flip_rate": 0.0,
+      "mcnemar_p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "category": "N-rerun",
+      "label": "same submission on Lite and Verified",
+      "before": "20250214_agentless_lite_o3_mini",
+      "after": "20250214_agentless_lite_o3_mini",
+      "n": 93,
+      "solved_before": 46,
+      "solved_after": 47,
+      "regressions": 7,
+      "improvements": 8,
+      "regression_rate": 0.15217391304347827,
+      "rate_ci95": [
+        0.07572186234017478,
+        0.2822441740631509
+      ],
+      "flip_rate": 0.16129032258064516,
+      "mcnemar_p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "category": "N-rerun",
+      "label": "same submission on Lite and Verified",
+      "before": "20250306_SWE-Fixer_Qwen2.5-7b-retriever_Qwen2.5-72b-editor",
+      "after": "20250306_SWE-Fixer_Qwen2.5-7b-retriever_Qwen2.5-72b-editor",
+      "n": 93,
+      "solved_before": 36,
+      "solved_after": 35,
+      "regressions": 1,
+      "improvements": 0,
+      "regression_rate": 0.027777777777777776,
+      "rate_ci95": [
+        0.004920280295569678,
+        0.14170033735030801
+      ],
+      "flip_rate": 0.010752688172043012,
+      "mcnemar_p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "category": "N-rerun",
+      "label": "same submission on Lite and Verified",
+      "before": "20250627_agentless_MCTS-Refine-7B",
+      "after": "20250627_agentless_MCTS-Refine-7B",
+      "n": 93,
+      "solved_before": 24,
+      "solved_after": 38,
+      "regressions": 4,
+      "improvements": 18,
+      "regression_rate": 0.16666666666666666,
+      "rate_ci95": [
+        0.06678568000728924,
+        0.3585347038786943
+      ],
+      "flip_rate": 0.23655913978494625,
+      "mcnemar_p": 0.004343509674072266,
+      "p_holm": 0.05212211608886719
+    },
+    {
+      "category": "N-rerun",
+      "label": "same submission on Lite and Verified",
+      "before": "20250901_entroPO_R2E_QwenCoder30BA3B",
+      "after": "20250901_entroPO_R2E_QwenCoder30BA3B",
+      "n": 93,
+      "solved_before": 62,
+      "solved_after": 56,
+      "regressions": 12,
+      "improvements": 6,
+      "regression_rate": 0.1935483870967742,
+      "rate_ci95": [
+        0.11433696420146607,
+        0.3085203175170827
+      ],
+      "flip_rate": 0.1935483870967742,
+      "mcnemar_p": 0.237884521484375,
+      "p_holm": 1.0
+    },
+    {
+      "category": "N-rerun",
+      "label": "same submission on Lite and Verified",
+      "before": "20250901_entroPO_R2E_QwenCoder30BA3B_tts",
+      "after": "20250901_entroPO_R2E_QwenCoder30BA3B_tts",
+      "n": 93,
+      "solved_before": 67,
+      "solved_after": 68,
+      "regressions": 5,
+      "improvements": 6,
+      "regression_rate": 0.07462686567164178,
+      "rate_ci95": [
+        0.03229557297792792,
+        0.16309244762013872
+      ],
+      "flip_rate": 0.11827956989247312,
+      "mcnemar_p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "category": "N-resub",
+      "label": "resubmission of composio_swekit",
+      "before": "20241016_composio_swekit",
+      "after": "20241025_composio_swekit",
+      "n": 500,
+      "solved_before": 203,
+      "solved_after": 243,
+      "regressions": 22,
+      "improvements": 62,
+      "regression_rate": 0.10837438423645321,
+      "rate_ci95": [
+        0.07266455378910974,
+        0.15863127838391541
+      ],
+      "flip_rate": 0.168,
+      "mcnemar_p": 1.4655953475888017e-05,
+      "p_holm": 0.00014655953475888018
+    },
+    {
+      "category": "N-resub",
+      "label": "resubmission of devlo",
+      "before": "20241108_devlo",
+      "after": "20241213_devlo",
+      "n": 500,
+      "solved_before": 271,
+      "solved_after": 291,
+      "regressions": 23,
+      "improvements": 43,
+      "regression_rate": 0.08487084870848709,
+      "rate_ci95": [
+        0.05721781701403402,
+        0.12412882046733706
+      ],
+      "flip_rate": 0.132,
+      "mcnemar_p": 0.018657260354021005,
+      "p_holm": 0.08254411014267606
+    },
+    {
+      "category": "N-resub",
+      "label": "resubmission of devlo",
+      "before": "20241213_devlo",
+      "after": "20250519_devlo",
+      "n": 500,
+      "solved_before": 291,
+      "solved_after": 351,
+      "regressions": 17,
+      "improvements": 77,
+      "regression_rate": 0.058419243986254296,
+      "rate_ci95": [
+        0.03679024761234673,
+        0.09155527757812844
+      ],
+      "flip_rate": 0.188,
+      "mcnemar_p": 2.7046423167464115e-10,
+      "p_holm": 4.327427706794258e-09
+    },
+    {
+      "category": "N-resub",
+      "label": "resubmission of emergent",
+      "before": "20241023_emergent",
+      "after": "20241223_emergent",
+      "n": 500,
+      "solved_before": 233,
+      "solved_after": 286,
+      "regressions": 27,
+      "improvements": 80,
+      "regression_rate": 0.11587982832618025,
+      "rate_ci95": [
+        0.08087199796262019,
+        0.16334861193023648
+      ],
+      "flip_rate": 0.214,
+      "mcnemar_p": 2.8773746289079084e-07,
+      "p_holm": 4.028324480471071e-06
+    },
+    {
+      "category": "N-resub",
+      "label": "resubmission of epam-ai-run-claude-3-5-sonnet",
+      "before": "20241029_epam-ai-run-claude-3-5-sonnet",
+      "after": "20241212_epam-ai-run-claude-3-5-sonnet",
+      "n": 500,
+      "solved_before": 198,
+      "solved_after": 277,
+      "regressions": 20,
+      "improvements": 99,
+      "regression_rate": 0.10101010101010101,
+      "rate_ci95": [
+        0.06634318099322403,
+        0.15086476821050798
+      ],
+      "flip_rate": 0.238,
+      "mcnemar_p": 9.202543569552252e-14,
+      "p_holm": 1.564432406823883e-12
+    },
+    {
+      "category": "N-resub",
+      "label": "resubmission of epam-ai-run-claude-3-5-sonnet",
+      "before": "20241212_epam-ai-run-claude-3-5-sonnet",
+      "after": "20250228_epam-ai-run-claude-3-5-sonnet",
+      "n": 500,
+      "solved_before": 277,
+      "solved_after": 314,
+      "regressions": 14,
+      "improvements": 51,
+      "regression_rate": 0.05054151624548736,
+      "rate_ci95": [
+        0.030341767433127664,
+        0.08303744704222071
+      ],
+      "flip_rate": 0.13,
+      "mcnemar_p": 4.47522484948754e-06,
+      "p_holm": 4.922747334436294e-05
+    },
+    {
+      "category": "N-resub",
+      "label": "resubmission of epam-ai-run-gpt-4o",
+      "before": "20240820_epam-ai-run-gpt-4o",
+      "after": "20241016_epam-ai-run-gpt-4o",
+      "n": 500,
+      "solved_before": 120,
+      "solved_after": 135,
+      "regressions": 32,
+      "improvements": 47,
+      "regression_rate": 0.26666666666666666,
+      "rate_ci95": [
+        0.19568340354111466,
+        0.35212605628498583
+      ],
+      "flip_rate": 0.158,
+      "mcnemar_p": 0.11466035574580126,
+      "p_holm": 0.22932071149160252
+    },
+    {
+      "category": "N-resub",
+      "label": "resubmission of gru",
+      "before": "20240824_gru",
+      "after": "20241208_gru",
+      "n": 500,
+      "solved_before": 226,
+      "solved_after": 285,
+      "regressions": 20,
+      "improvements": 79,
+      "regression_rate": 0.08849557522123894,
+      "rate_ci95": [
+        0.058016642078432115,
+        0.13273037673800492
+      ],
+      "flip_rate": 0.198,
+      "mcnemar_p": 1.7924150285414482e-09,
+      "p_holm": 2.6886225428121725e-08
+    },
+    {
+      "category": "N-resub",
+      "label": "resubmission of lingma-agent_lingma-swe-gpt-72b",
+      "before": "20240918_lingma-agent_lingma-swe-gpt-72b",
+      "after": "20241002_lingma-agent_lingma-swe-gpt-72b",
+      "n": 500,
+      "solved_before": 125,
+      "solved_after": 144,
+      "regressions": 37,
+      "improvements": 56,
+      "regression_rate": 0.296,
+      "rate_ci95": [
+        0.22302390784930146,
+        0.38114120652369604
+      ],
+      "flip_rate": 0.186,
+      "mcnemar_p": 0.06138589870445953,
+      "p_holm": 0.18415769611337857
+    },
+    {
+      "category": "N-resub",
+      "label": "resubmission of lingma-agent_lingma-swe-gpt-7b",
+      "before": "20240918_lingma-agent_lingma-swe-gpt-7b",
+      "after": "20241002_lingma-agent_lingma-swe-gpt-7b",
+      "n": 500,
+      "solved_before": 51,
+      "solved_after": 91,
+      "regressions": 13,
+      "improvements": 53,
+      "regression_rate": 0.2549019607843137,
+      "rate_ci95": [
+        0.1554562324126639,
+        0.38868544106148706
+      ],
+      "flip_rate": 0.132,
+      "mcnemar_p": 7.237175237417024e-07,
+      "p_holm": 8.684610284900428e-06
+    },
+    {
+      "category": "N-resub",
+      "label": "resubmission of nfactorial",
+      "before": "20241001_nfactorial",
+      "after": "20241007_nfactorial",
+      "n": 500,
+      "solved_before": 129,
+      "solved_after": 158,
+      "regressions": 48,
+      "improvements": 77,
+      "regression_rate": 0.37209302325581395,
+      "rate_ci95": [
+        0.29351051285070046,
+        0.4580733283556686
+      ],
+      "flip_rate": 0.25,
+      "mcnemar_p": 0.011959013523238282,
+      "p_holm": 0.07407481936193692
+    },
+    {
+      "category": "N-resub",
+      "label": "resubmission of nfactorial",
+      "before": "20241007_nfactorial",
+      "after": "20241030_nfactorial",
+      "n": 500,
+      "solved_before": 158,
+      "solved_after": 208,
+      "regressions": 25,
+      "improvements": 75,
+      "regression_rate": 0.15822784810126583,
+      "rate_ci95": [
+        0.10953056795868964,
+        0.22315027553272423
+      ],
+      "flip_rate": 0.2,
+      "mcnemar_p": 5.636282034205402e-07,
+      "p_holm": 7.327166644467023e-06
+    },
+    {
+      "category": "N-resub",
+      "label": "resubmission of nfactorial",
+      "before": "20241030_nfactorial",
+      "after": "20241105_nfactorial",
+      "n": 500,
+      "solved_before": 208,
+      "solved_after": 246,
+      "regressions": 35,
+      "improvements": 73,
+      "regression_rate": 0.16826923076923078,
+      "rate_ci95": [
+        0.12354866085094093,
+        0.22502121399894698
+      ],
+      "flip_rate": 0.216,
+      "mcnemar_p": 0.0003258385611274805,
+      "p_holm": 0.0029325470501473244
+    },
+    {
+      "category": "N-resub",
+      "label": "resubmission of solver",
+      "before": "20240920_solver",
+      "after": "20240924_solver",
+      "n": 500,
+      "solved_before": 218,
+      "solved_after": 227,
+      "regressions": 35,
+      "improvements": 44,
+      "regression_rate": 0.16055045871559634,
+      "rate_ci95": [
+        0.11776228534204851,
+        0.21509503267224644
+      ],
+      "flip_rate": 0.158,
+      "mcnemar_p": 0.3681876338306308,
+      "p_holm": 0.3681876338306308
+    },
+    {
+      "category": "N-resub",
+      "label": "resubmission of solver",
+      "before": "20240924_solver",
+      "after": "20241028_solver",
+      "n": 500,
+      "solved_before": 227,
+      "solved_after": 250,
+      "regressions": 31,
+      "improvements": 54,
+      "regression_rate": 0.13656387665198239,
+      "rate_ci95": [
+        0.09790329791160078,
+        0.1873208557937972
+      ],
+      "flip_rate": 0.17,
+      "mcnemar_p": 0.016508822028535212,
+      "p_holm": 0.08254411014267606
+    },
+    {
+      "category": "N-resub",
+      "label": "resubmission of trae",
+      "before": "20250519_trae",
+      "after": "20250612_trae",
+      "n": 500,
+      "solved_before": 353,
+      "solved_after": 376,
+      "regressions": 13,
+      "improvements": 36,
+      "regression_rate": 0.036827195467422094,
+      "rate_ci95": [
+        0.02164601077430518,
+        0.061981010290503395
+      ],
+      "flip_rate": 0.098,
+      "mcnemar_p": 0.001402688503695515,
+      "p_holm": 0.01122150802956412
+    },
+    {
+      "category": "N-resub",
+      "label": "resubmission of warp",
+      "before": "20250623_warp",
+      "after": "20250901_warp",
+      "n": 500,
+      "solved_before": 355,
+      "solved_after": 378,
+      "regressions": 26,
+      "improvements": 49,
+      "regression_rate": 0.07323943661971831,
+      "rate_ci95": [
+        0.05046738156064838,
+        0.1051489126482728
+      ],
+      "flip_rate": 0.15,
+      "mcnemar_p": 0.010582117051705276,
+      "p_holm": 0.07407481936193692
+    }
+  ]
+}
