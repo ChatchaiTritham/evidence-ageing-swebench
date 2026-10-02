@@ -3,6 +3,7 @@ message: "If you use these scripts, please cite the article and this software."
 title: "Evidence ageing in LLM-based software engineering agents: analysis scripts"
 version: 1.0.1
 license: MIT
+doi: 10.5281/zenodo.23097803
 repository-code: "https://github.com/ChatchaiTritham/evidence-ageing-swebench"
 authors:
   - family-names: Saosing

@@ -1,5 +1,7 @@
 # Evidence ageing in LLM-based software engineering agents: analysis scripts
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23097803.svg)](https://doi.org/10.5281/zenodo.23097803)
+
 Analysis scripts and summary results for the article *Evidence Ageing in LLM-Based Software Engineering
 Agents: An Empirical Characterisation and the Limits of Uniform Probing* (R. Saosing and C. Tritham).
 
