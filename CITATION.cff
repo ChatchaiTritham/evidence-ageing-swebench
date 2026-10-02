@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use these scripts, please cite the article and this software."
 title: "Evidence ageing in LLM-based software engineering agents: analysis scripts"
-version: 1.0.0
+version: 1.0.1
 license: MIT
 repository-code: "https://github.com/ChatchaiTritham/evidence-ageing-swebench"
 authors:

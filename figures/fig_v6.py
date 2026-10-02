@@ -2,7 +2,7 @@
 from style import BLUE, GREEN, GREY, HERE, VERM, load, plt
 
 STR = [("random", "Random", GREY, "o"), ("coarse", "Coarse (repository)", "#E69F00", "^"),
-       ("flaky", "Instability", "#CC79A7", "s"), ("informed", "Informed sentinel (Eq. 4)", VERM, "v"),
+       ("flaky", "Instability", "#CC79A7", "s"), ("informed", "Informed sentinel (Eq. 7)", VERM, "v"),
        ("predictive", "Regression history", BLUE, "D"), ("fragile", "Historical difficulty", GREEN, "P")]
 
 

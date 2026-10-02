@@ -1,0 +1,11 @@
+{
+  "title": "Evidence ageing in LLM-based software engineering agents: analysis scripts",
+  "upload_type": "software",
+  "description": "Analysis scripts and summary results for the article \"Evidence Ageing in LLM-Based Software Engineering Agents: An Empirical Characterisation and the Limits of Uniform Probing\". Computed from the public SWE-bench submissions archive at commit 40f164d; the archive itself is not redistributed.",
+  "creators": [
+    {"name": "Saosing, Rungtiva", "orcid": "0009-0007-8713-8190", "affiliation": "Rajamangala University of Technology Krungthep"},
+    {"name": "Tritham, Chatchai", "orcid": "0000-0001-7899-228X", "affiliation": "Rajamangala University of Technology Krungthep"}
+  ],
+  "license": "MIT",
+  "keywords": ["evidence ageing", "regression test selection", "LLM-based agents", "SWE-bench", "flaky tests"]
+}
