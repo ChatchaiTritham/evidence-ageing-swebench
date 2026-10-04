@@ -30,9 +30,10 @@ article.
 
 | Path | Purpose | Article items |
 |---|---|---|
-| `experiments/swebench_pairs.py` | Builds model-, harness- and configuration-change pairs and the noise floor; regression rates, Wilson intervals, exact McNemar tests with Holm correction, repository homogeneity | Tables 4–5, Figure 3 |
-| `experiments/v6_selection.py` | Six selection strategies evaluated without look-ahead (Algorithm 2), rerun control, paired Wilcoxon tests | Table 6, Figure 4 |
-| `experiments/prop1_real.py` | Proposition 1 on real pairs: uniform versus ranked probes outside a targeted set | Table 7 |
+| `experiments/swebench_pairs.py` | Builds model-, harness- and configuration-change pairs and the noise floor; regression rates, Wilson intervals, exact McNemar tests with Holm correction, repository homogeneity | Tables 5–6, Figure 3 |
+| `experiments/v6_selection.py` | Six selection strategies evaluated without look-ahead (Algorithm 2), rerun control, paired Wilcoxon tests | Table 7, Figure 4 |
+| `experiments/prop1_real.py` | Proposition 1 on real pairs: uniform versus ranked probes outside a targeted set | Table 8 |
+| `experiments/robustness.py` | Effect sizes (McNemar odds ratios, Cliff's delta) and a cluster bootstrap over pairs sharing a submission; reads only `results/*.json` | RQ1 and RQ3 robustness |
 | `figures/fig_pairs.py`, `figures/fig_v6.py` | Figures from the result files; `figures/style.py` holds the shared style | Figures 3–4 |
 | `results/*.json` | Outputs of the three experiments, as reported in the article | — |
 
@@ -49,12 +50,13 @@ article.
 python experiments/swebench_pairs.py   # downloads the archive files once, then writes results/swebench_pairs.json
 python experiments/v6_selection.py     # fixed seeds; byte-identical output on repeated runs
 python experiments/prop1_real.py
+python experiments/robustness.py      # effect sizes and cluster bootstrap, from results/*.json only
 python figures/fig_pairs.py            # -> figures/figure3_pairs.pdf
 python figures/fig_v6.py               # -> figures/figure4_selection.pdf
 ```
 
-The archive is fetched from its default branch. To reproduce the article exactly, use the commit above, or
-compare your `results/*.json` with the committed ones.
+Every archive listing and download is pinned to the commit above (`REF` in `experiments/swebench_pairs.py`), so a
+run reproduces the committed `results/*.json` byte for byte.
 
 ## Methodology
 

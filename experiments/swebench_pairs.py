@@ -29,9 +29,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 CACHE = ROOT / "results" / "external" / "swebench"
 API = "repos/SWE-bench/experiments/contents/evaluation"
+# Archive commit the article was computed on; every listing and download is pinned to it.
+REF = "40f164d5b8f1d249bf95a6df8b74b577fd8e519d"
 
 
 def gh(path):
+    path += ("&" if "?" in path else "?") + "ref=" + REF
     return json.loads(subprocess.run(["gh", "api", "--paginate", path], capture_output=True, text=True, check=True).stdout)
 
 

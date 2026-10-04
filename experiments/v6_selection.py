@@ -188,6 +188,10 @@ def main():
     out["rerun_control"] = {"pairs": n_ctrl, "results": {
         str(b): {st: {"mean_recall": ci(ctrl[st][b])[0], "ci95": list(ci(ctrl[st][b])[1:])} for st in ctrl} for b in BUDGETS}} if n_ctrl > 1 else {"pairs": n_ctrl}
     (ROOT / "results" / "v6_selection.json").write_text(json.dumps(out, indent=2), encoding="utf-8")
+    # Per-pair mean recalls, for the cluster bootstrap in robustness.py (no per-task archive data).
+    per_pair = [{"before": p["before"], "after": p["after"], "p_holm": p.get("p_holm"),
+                 "recall": {str(b): {st: rows[st][b][i] for st in rows} for b in BUDGETS}} for i, p in enumerate(used)]
+    (ROOT / "results" / "v6_per_pair.json").write_text(json.dumps(per_pair, indent=2), encoding="utf-8")
     print(f"pairs evaluated: {len(used)} (significant shift: {len(sig)})")
     for subset in ("all", "significant_shift"):
         print(f"== {subset}")
