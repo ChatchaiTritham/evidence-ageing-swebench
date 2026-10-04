@@ -2,16 +2,18 @@
   "shared_tasks": 93,
   "shared_task_comparison": {
     "model": {
-      "pairs": 111,
-      "median_rate_shared93": 0.10526315789473684,
+      "pairs": 99,
+      "median_rate_shared93": 0.10126582278481013,
       "rerun_median": 0.17517006802721088,
       "median_diff_ci90": [
-        -0.1174593460395174,
-        0.030636292223095052
+        -0.1329392222005081,
+        0.02663895711316834
       ],
       "equivalent_within_margin": false,
-      "cliffs_delta": -0.006756756756756757,
-      "magnitude": "negligible"
+      "cliffs_delta": -0.12878787878787878,
+      "magnitude": "negligible",
+      "pooled_rate_shared93": 0.1775972141613465,
+      "rerun_pooled": 0.16435643564356436
     },
     "harness": {
       "pairs": 17,
@@ -23,11 +25,13 @@
       ],
       "equivalent_within_margin": false,
       "cliffs_delta": -0.6372549019607843,
-      "magnitude": "large"
+      "magnitude": "large",
+      "pooled_rate_shared93": 0.0551314673452078,
+      "rerun_pooled": 0.16435643564356436
     }
   },
   "classification_audit": {
-    "model_pairs_checked": 111,
+    "model_pairs_checked": 99,
     "harness_pairs_checked": 17,
     "violations": [],
     "harness_model_tokens": [
@@ -71,8 +75,8 @@
   },
   "data_source": {
     "per_instance": {
-      "pairs": 113,
-      "median_regression_rate": 0.11873350923482849
+      "pairs": 101,
+      "median_regression_rate": 0.11197916666666667
     },
     "mixed_or_resolved_list": {
       "pairs": 15,
@@ -81,18 +85,18 @@
   },
   "harness_family_rq3": {
     "mini_swe_agent_only": {
-      "pairs": 113,
-      "gain_fragile_B0.1": 0.24937320626006568,
-      "gain_fragile_B0.25": 0.32553890003787145,
-      "gain_predictive_B0.1": 0.20610784606177854,
-      "gain_predictive_B0.25": 0.2737818674955705
+      "pairs": 101,
+      "gain_fragile_B0.1": 0.27882901409504374,
+      "gain_fragile_B0.25": 0.3633387446415179,
+      "gain_predictive_B0.1": 0.23477440339398797,
+      "gain_predictive_B0.25": 0.3174353218708789
     },
     "other_harness_involved": {
       "pairs": 8,
       "gain_fragile_B0.1": 0.41164186507936507,
-      "gain_fragile_B0.25": 0.4653901740620491,
-      "gain_predictive_B0.1": 0.25755275974025976,
-      "gain_predictive_B0.25": 0.37067291215728715
+      "gain_fragile_B0.25": 0.46581631042568544,
+      "gain_predictive_B0.1": 0.2581750541125541,
+      "gain_predictive_B0.25": 0.3730403363997114
     }
   }
 }

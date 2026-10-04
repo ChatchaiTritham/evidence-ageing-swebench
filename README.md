@@ -73,7 +73,10 @@ run reproduces the committed `results/*.json` byte for byte.
    the 93 shared tasks; pairs with identical outcomes are treated as re-grades, the others as reruns.
 4. **Measures.** Regressions (solved before, not after), improvements, regression rate relative to the
    previously solved tasks, and an exact McNemar test per pair, Holm-corrected within each group.
-5. **Selection.** Each strategy scores the previously solved tasks using only submissions dated before the
+5. **Consistency check.** A submission whose per-task outcomes disagree with the resolved percentage in its own
+   `metadata.yaml` by more than two points is excluded (two at the pinned commit: a Gemini 3 Pro file that marks every
+   task unresolved, and a Claude 3.7 Sonnet file at 10.2% against a declared 52.8%).
+6. **Selection.** Each strategy scores the previously solved tasks using only submissions dated before the
    pair, selects a share of them, and is scored by its recall of the pair's regressions; 20 seeds for
    tie-breaking and sampling.
 

@@ -3,6 +3,7 @@
     python figures/fig_pairs.py
 """
 import random
+import statistics
 
 from style import BLUE, GREEN, GREY, HERE, load, plt
 
@@ -29,7 +30,7 @@ def main():
             ax.scatter([a for a, g in zip(xs, sig) if not g], [v for v, g in zip(vals, sig) if not g], s=10,
                        facecolors="none", edgecolors=COL[c], linewidths=0.7, zorder=3)
             ax.scatter([a for a, g in zip(xs, sig) if g], [v for v, g in zip(vals, sig) if g], s=10, color=COL[c], zorder=3)
-            med = sorted(f(r) for r in rs)[len(rs) // 2]
+            med = statistics.median(f(r) for r in rs)
             ax.plot([x - 0.32, x + 0.32], [med, med], color="#1F2A37", lw=1.4, zorder=4)
         counts = {c: sum(r["category"] == c for r in pairs) for c, _ in CATS}
         ax.set_xticks(range(len(CATS)), [lab + chr(10) + f"(n={counts[c]})" for c, lab in CATS], fontsize=7)

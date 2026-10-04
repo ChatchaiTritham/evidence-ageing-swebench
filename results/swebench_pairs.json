@@ -2,14 +2,14 @@
   "source": "SWE-bench/experiments, evaluation/{verified,lite}/*/per_instance_details.json",
   "summary": {
     "M": {
-      "pairs": 111,
-      "median_regression_rate": 0.11873350923482849,
+      "pairs": 99,
+      "median_regression_rate": 0.11197916666666667,
       "min": 0.03303303303303303,
-      "max": 1.0,
-      "median_flip_rate": 0.202,
-      "significant_after_holm": 68,
-      "pooled_regression_rate": 0.2783078357185941,
-      "median_asymmetry": 0.4772727272727273
+      "max": 0.8727810650887574,
+      "median_flip_rate": 0.164,
+      "significant_after_holm": 56,
+      "pooled_regression_rate": 0.18914504099118534,
+      "median_asymmetry": 0.415929203539823
     },
     "H": {
       "pairs": 17,
@@ -33,13 +33,13 @@
     },
     "N-rerun": {
       "pairs": 12,
-      "median_regression_rate": 0.1836734693877551,
+      "median_regression_rate": 0.17517006802721088,
       "min": 0.027777777777777776,
       "max": 0.5,
-      "median_flip_rate": 0.16129032258064516,
+      "median_flip_rate": 0.15591397849462366,
       "significant_after_holm": 0,
       "pooled_regression_rate": 0.16435643564356436,
-      "median_asymmetry": 0.3333333333333333
+      "median_asymmetry": 0.26666666666666666
     },
     "N-regrade": {
       "pairs": 13,
@@ -75,39 +75,20 @@
         "auc": 0.5392156862745098
       },
       "M_vs_N-rerun_regression_rate": {
-        "U": 707.0,
-        "z": 0.3494713074214246,
-        "p_one_sided": 0.36336775395785065,
-        "auc": 0.5307807807807807
+        "U": 563.0,
+        "z": -0.2943981558540647,
+        "p_one_sided": 0.6157731620394602,
+        "auc": 0.4739057239057239
       },
       "M_vs_N-rerun_asymmetry": {
-        "U": 813.5,
-        "z": 1.2572443376746374,
-        "p_one_sided": 0.10433258640763073,
-        "auc": 0.6107357357357357
+        "U": 684.5,
+        "z": 0.8594526807997696,
+        "p_one_sided": 0.1950454079108524,
+        "auc": 0.5761784511784511
       }
     }
   },
   "pairs": [
-    {
-      "category": "M",
-      "label": "model change within mini-SWE-agent v0.0.0",
-      "before": "20250720_mini-v0.0.0-Llama-4-Maverick-17B-Instruct",
-      "after": "20250720_mini-v0.0.0-claude-3-7-sonnet-20250219",
-      "n": 500,
-      "solved_before": 105,
-      "solved_after": 51,
-      "regressions": 91,
-      "improvements": 37,
-      "regression_rate": 0.8666666666666667,
-      "rate_ci95": [
-        0.7885632722139584,
-        0.9188868203976901
-      ],
-      "flip_rate": 0.256,
-      "mcnemar_p": 2.006129945030041e-06,
-      "p_holm": 0.00012036779670180247
-    },
     {
       "category": "M",
       "label": "model change within mini-SWE-agent v1.0.0",
@@ -125,7 +106,7 @@
       ],
       "flip_rate": 0.208,
       "mcnemar_p": 3.2215052465401456e-08,
-      "p_holm": 2.1584085151818974e-06
+      "p_holm": 2.126193462716496e-06
     },
     {
       "category": "M",
@@ -163,7 +144,7 @@
       ],
       "flip_rate": 0.274,
       "mcnemar_p": 1.199153418158447e-18,
-      "p_holm": 1.0072888712530955e-16
+      "p_holm": 9.952973370715111e-17
     },
     {
       "category": "M",
@@ -220,7 +201,7 @@
       ],
       "flip_rate": 0.57,
       "mcnemar_p": 1.241341877481298e-79,
-      "p_holm": 1.228928458706485e-77
+      "p_holm": 1.2165150399316721e-77
     },
     {
       "category": "M",
@@ -277,7 +258,7 @@
       ],
       "flip_rate": 0.212,
       "mcnemar_p": 2.970770255782769e-12,
-      "p_holm": 2.2577853943949045e-10
+      "p_holm": 2.228077691837077e-10
     },
     {
       "category": "M",
@@ -315,7 +296,7 @@
       ],
       "flip_rate": 0.462,
       "mcnemar_p": 6.817921209446024e-62,
-      "p_holm": 6.545204361068183e-60
+      "p_holm": 6.477025148973723e-60
     },
     {
       "category": "M",
@@ -334,7 +315,7 @@
       ],
       "flip_rate": 0.254,
       "mcnemar_p": 1.984553317143075e-09,
-      "p_holm": 1.3891873220001525e-07
+      "p_holm": 1.3693417888287217e-07
     },
     {
       "category": "M",
@@ -353,7 +334,7 @@
       ],
       "flip_rate": 0.18,
       "mcnemar_p": 1.2492581287631034e-06,
-      "p_holm": 7.620474585454931e-05
+      "p_holm": 7.495548772578621e-05
     },
     {
       "category": "M",
@@ -391,7 +372,7 @@
       ],
       "flip_rate": 0.518,
       "mcnemar_p": 8.744485933445694e-67,
-      "p_holm": 8.56959621477678e-65
+      "p_holm": 8.482151355442323e-65
     },
     {
       "category": "M",
@@ -410,7 +391,7 @@
       ],
       "flip_rate": 0.282,
       "mcnemar_p": 5.815315210521221e-24,
-      "p_holm": 5.2337836894691e-22
+      "p_holm": 5.175630537363887e-22
     },
     {
       "category": "M",
@@ -448,7 +429,7 @@
       ],
       "flip_rate": 0.376,
       "mcnemar_p": 2.626053623931675e-49,
-      "p_holm": 2.4947509427350914e-47
+      "p_holm": 2.4684904064957746e-47
     },
     {
       "category": "M",
@@ -467,7 +448,7 @@
       ],
       "flip_rate": 0.198,
       "mcnemar_p": 4.394027829089421e-10,
-      "p_holm": 3.163700036944383e-08
+      "p_holm": 3.119759758653489e-08
     },
     {
       "category": "M",
@@ -486,7 +467,7 @@
       ],
       "flip_rate": 0.594,
       "mcnemar_p": 3.4759523554125695e-85,
-      "p_holm": 3.510711878966695e-83
+      "p_holm": 3.441192831858444e-83
     },
     {
       "category": "M",
@@ -505,7 +486,7 @@
       ],
       "flip_rate": 0.476,
       "mcnemar_p": 1.0174408616545886e-65,
-      "p_holm": 9.869176358049509e-64
+      "p_holm": 9.76743227188405e-64
     },
     {
       "category": "M",
@@ -524,7 +505,7 @@
       ],
       "flip_rate": 0.142,
       "mcnemar_p": 1.0414019304757919e-06,
-      "p_holm": 6.45669196894991e-05
+      "p_holm": 6.35255177590233e-05
     },
     {
       "category": "M",
@@ -543,7 +524,7 @@
       ],
       "flip_rate": 0.148,
       "mcnemar_p": 9.674891137601899e-07,
-      "p_holm": 6.0951814166891965e-05
+      "p_holm": 5.998432505313177e-05
     },
     {
       "category": "M",
@@ -619,7 +600,7 @@
       ],
       "flip_rate": 0.252,
       "mcnemar_p": 5.027865916342065e-12,
-      "p_holm": 3.7206207780931277e-10
+      "p_holm": 3.6703421189297074e-10
     },
     {
       "category": "M",
@@ -638,7 +619,7 @@
       ],
       "flip_rate": 0.244,
       "mcnemar_p": 1.8172560940408258e-17,
-      "p_holm": 1.5083225580538854e-15
+      "p_holm": 1.4901499971134773e-15
     },
     {
       "category": "M",
@@ -676,7 +657,7 @@
       ],
       "flip_rate": 0.254,
       "mcnemar_p": 1.935609019546314e-08,
-      "p_holm": 1.3355702234869565e-06
+      "p_holm": 1.3162141332914936e-06
     },
     {
       "category": "M",
@@ -695,7 +676,7 @@
       ],
       "flip_rate": 0.238,
       "mcnemar_p": 4.4033126351506443e-13,
-      "p_holm": 3.4345838554175026e-11
+      "p_holm": 3.390550729065996e-11
     },
     {
       "category": "M",
@@ -790,7 +771,7 @@
       ],
       "flip_rate": 0.35,
       "mcnemar_p": 5.274271474244677e-35,
-      "p_holm": 4.852329756305103e-33
+      "p_holm": 4.799587041562656e-33
     },
     {
       "category": "M",
@@ -809,7 +790,7 @@
       ],
       "flip_rate": 0.438,
       "mcnemar_p": 4.708507874893429e-47,
-      "p_holm": 4.425997402399823e-45
+      "p_holm": 4.378912323650889e-45
     },
     {
       "category": "M",
@@ -828,7 +809,7 @@
       ],
       "flip_rate": 0.296,
       "mcnemar_p": 1.1113341249848234e-19,
-      "p_holm": 9.557473474869482e-18
+      "p_holm": 9.446340062370999e-18
     },
     {
       "category": "M",
@@ -847,7 +828,7 @@
       ],
       "flip_rate": 0.326,
       "mcnemar_p": 5.83635188709137e-25,
-      "p_holm": 5.311080217253147e-23
+      "p_holm": 5.252716698382233e-23
     },
     {
       "category": "M",
@@ -866,7 +847,7 @@
       ],
       "flip_rate": 0.378,
       "mcnemar_p": 3.3939314642716165e-41,
-      "p_holm": 3.1563562617726034e-39
+      "p_holm": 3.122416947129887e-39
     },
     {
       "category": "M",
@@ -885,7 +866,7 @@
       ],
       "flip_rate": 0.276,
       "mcnemar_p": 4.201557931039116e-12,
-      "p_holm": 3.1511684482793366e-10
+      "p_holm": 3.1091528689689454e-10
     },
     {
       "category": "M",
@@ -942,7 +923,7 @@
       ],
       "flip_rate": 0.318,
       "mcnemar_p": 7.159593494194069e-13,
-      "p_holm": 5.512886990529433e-11
+      "p_holm": 5.4412910555874925e-11
     },
     {
       "category": "M",
@@ -961,7 +942,7 @@
       ],
       "flip_rate": 0.146,
       "mcnemar_p": 9.089007009078587e-10,
-      "p_holm": 6.453194976445797e-08
+      "p_holm": 6.362304906355011e-08
     },
     {
       "category": "M",
@@ -999,7 +980,7 @@
       ],
       "flip_rate": 0.154,
       "mcnemar_p": 2.4176312825015983e-07,
-      "p_holm": 1.547284020801023e-05
+      "p_holm": 1.5231077079760069e-05
     },
     {
       "category": "M",
@@ -1037,7 +1018,7 @@
       ],
       "flip_rate": 0.14,
       "mcnemar_p": 2.2489162308892232e-08,
-      "p_holm": 1.5292630370046718e-06
+      "p_holm": 1.5067738746957796e-06
     },
     {
       "category": "M",
@@ -1094,7 +1075,7 @@
       ],
       "flip_rate": 0.2,
       "mcnemar_p": 1.8100026213029256e-07,
-      "p_holm": 1.1765017038469016e-05
+      "p_holm": 1.1584016776338724e-05
     },
     {
       "category": "M",
@@ -1132,26 +1113,7 @@
       ],
       "flip_rate": 0.156,
       "mcnemar_p": 1.5129781377543385e-07,
-      "p_holm": 9.985655709178635e-06
-    },
-    {
-      "category": "M",
-      "label": "model change within mini-SWE-agent v2.0.0",
-      "before": "20260217_mini-v2.0.0_claude-4-5-haiku-high",
-      "after": "20260226_mini-v2.0.0_gemini-3-pro-high",
-      "n": 500,
-      "solved_before": 333,
-      "solved_after": 0,
-      "regressions": 333,
-      "improvements": 0,
-      "regression_rate": 1.0,
-      "rate_ci95": [
-        0.9885952328928493,
-        1.0000000000000002
-      ],
-      "flip_rate": 0.666,
-      "mcnemar_p": 1.142987391282275e-100,
-      "p_holm": 1.1658471391079205e-98
+      "p_holm": 9.8343578954032e-06
     },
     {
       "category": "M",
@@ -1284,7 +1246,7 @@
       ],
       "flip_rate": 0.254,
       "mcnemar_p": 2.8158175808425007e-22,
-      "p_holm": 2.5060776469498257e-20
+      "p_holm": 2.4779194711414004e-20
     },
     {
       "category": "M",
@@ -1323,25 +1285,6 @@
       "flip_rate": 0.11,
       "mcnemar_p": 0.5900533317766357,
       "p_holm": 1.0
-    },
-    {
-      "category": "M",
-      "label": "model change within mini-SWE-agent v2.0.0",
-      "before": "20260217_mini-v2.0.0_claude-4-5-opus-high",
-      "after": "20260226_mini-v2.0.0_gemini-3-pro-high",
-      "n": 500,
-      "solved_before": 384,
-      "solved_after": 0,
-      "regressions": 384,
-      "improvements": 0,
-      "regression_rate": 1.0,
-      "rate_ci95": [
-        0.9900949253509681,
-        1.0
-      ],
-      "flip_rate": 0.768,
-      "mcnemar_p": 5.075883674631299e-116,
-      "p_holm": 5.634230878840741e-114
     },
     {
       "category": "M",
@@ -1455,7 +1398,7 @@
       ],
       "flip_rate": 0.204,
       "mcnemar_p": 4.301653981910124e-15,
-      "p_holm": 3.4843397253472004e-13
+      "p_holm": 3.441323185528099e-13
     },
     {
       "category": "M",
@@ -1494,25 +1437,6 @@
       "flip_rate": 0.124,
       "mcnemar_p": 0.007148733833163067,
       "p_holm": 0.2502056841607074
-    },
-    {
-      "category": "M",
-      "label": "model change within mini-SWE-agent v2.0.0",
-      "before": "20260217_mini-v2.0.0_claude-4-5-sonnet-high",
-      "after": "20260226_mini-v2.0.0_gemini-3-pro-high",
-      "n": 500,
-      "solved_before": 357,
-      "solved_after": 0,
-      "regressions": 357,
-      "improvements": 0,
-      "regression_rate": 1.0,
-      "rate_ci95": [
-        0.9893537773915203,
-        1.0
-      ],
-      "flip_rate": 0.714,
-      "mcnemar_p": 6.812735744013041e-108,
-      "p_holm": 7.153372531213693e-106
     },
     {
       "category": "M",
@@ -1607,7 +1531,7 @@
       ],
       "flip_rate": 0.258,
       "mcnemar_p": 3.636120160879614e-19,
-      "p_holm": 3.090702136747672e-17
+      "p_holm": 3.054340935138876e-17
     },
     {
       "category": "M",
@@ -1646,25 +1570,6 @@
       "flip_rate": 0.13,
       "mcnemar_p": 1.0,
       "p_holm": 1.0
-    },
-    {
-      "category": "M",
-      "label": "model change within mini-SWE-agent v2.0.0",
-      "before": "20260217_mini-v2.0.0_claude-4-6-opus",
-      "after": "20260226_mini-v2.0.0_gemini-3-pro-high",
-      "n": 500,
-      "solved_before": 378,
-      "solved_after": 0,
-      "regressions": 378,
-      "improvements": 0,
-      "regression_rate": 1.0,
-      "rate_ci95": [
-        0.9899392837239316,
-        1.0
-      ],
-      "flip_rate": 0.756,
-      "mcnemar_p": 3.248565551764031e-114,
-      "p_holm": 3.5084507959051535e-112
     },
     {
       "category": "M",
@@ -1740,7 +1645,7 @@
       ],
       "flip_rate": 0.226,
       "mcnemar_p": 3.69703787625371e-11,
-      "p_holm": 2.6988376496652084e-09
+      "p_holm": 2.6618672709026713e-09
     },
     {
       "category": "M",
@@ -1779,25 +1684,6 @@
       "flip_rate": 0.138,
       "mcnemar_p": 0.0006361729964503618,
       "p_holm": 0.029900130833167008
-    },
-    {
-      "category": "M",
-      "label": "model change within mini-SWE-agent v2.0.0",
-      "before": "20260217_mini-v2.0.0_deepseek-3-2-high",
-      "after": "20260226_mini-v2.0.0_gemini-3-pro-high",
-      "n": 500,
-      "solved_before": 350,
-      "solved_after": 0,
-      "regressions": 350,
-      "improvements": 0,
-      "regression_rate": 1.0,
-      "rate_ci95": [
-        0.989143164625075,
-        0.9999999999999998
-      ],
-      "flip_rate": 0.7,
-      "mcnemar_p": 8.720301752336693e-106,
-      "p_holm": 8.981910804906793e-104
     },
     {
       "category": "M",
@@ -1854,7 +1740,7 @@
       ],
       "flip_rate": 0.24,
       "mcnemar_p": 1.938132755385024e-21,
-      "p_holm": 1.705556824738821e-19
+      "p_holm": 1.6861754971849708e-19
     },
     {
       "category": "M",
@@ -1897,25 +1783,6 @@
     {
       "category": "M",
       "label": "model change within mini-SWE-agent v2.0.0",
-      "before": "20260217_mini-v2.0.0_gemini-3-flash-high",
-      "after": "20260226_mini-v2.0.0_gemini-3-pro-high",
-      "n": 500,
-      "solved_before": 379,
-      "solved_after": 0,
-      "regressions": 379,
-      "improvements": 0,
-      "regression_rate": 1.0,
-      "rate_ci95": [
-        0.9899655627810562,
-        1.0
-      ],
-      "flip_rate": 0.758,
-      "mcnemar_p": 1.6242827758820155e-114,
-      "p_holm": 1.786711053470217e-112
-    },
-    {
-      "category": "M",
-      "label": "model change within mini-SWE-agent v2.0.0",
       "before": "20260217_mini-v2.0.0_glm-5-high",
       "after": "20260217_mini-v2.0.0_gpt-5-2-high",
       "n": 500,
@@ -1949,7 +1816,7 @@
       ],
       "flip_rate": 0.238,
       "mcnemar_p": 3.3657704323663983e-15,
-      "p_holm": 2.7599317545404464e-13
+      "p_holm": 2.726274050216783e-13
     },
     {
       "category": "M",
@@ -1992,25 +1859,6 @@
     {
       "category": "M",
       "label": "model change within mini-SWE-agent v2.0.0",
-      "before": "20260217_mini-v2.0.0_glm-5-high",
-      "after": "20260226_mini-v2.0.0_gemini-3-pro-high",
-      "n": 500,
-      "solved_before": 364,
-      "solved_after": 0,
-      "regressions": 364,
-      "improvements": 0,
-      "regression_rate": 1.0,
-      "rate_ci95": [
-        0.9895563742654447,
-        1.0000000000000002
-      ],
-      "flip_rate": 0.728,
-      "mcnemar_p": 5.3224498000101884e-110,
-      "p_holm": 5.6950212860109016e-108
-    },
-    {
-      "category": "M",
-      "label": "model change within mini-SWE-agent v2.0.0",
       "before": "20260217_mini-v2.0.0_gpt-5-2-high",
       "after": "20260217_mini-v2.0.0_gpt-5-mini",
       "n": 500,
@@ -2025,7 +1873,7 @@
       ],
       "flip_rate": 0.242,
       "mcnemar_p": 6.364983531202538e-15,
-      "p_holm": 5.091986824962031e-13
+      "p_holm": 5.028336989650005e-13
     },
     {
       "category": "M",
@@ -2068,25 +1916,6 @@
     {
       "category": "M",
       "label": "model change within mini-SWE-agent v2.0.0",
-      "before": "20260217_mini-v2.0.0_gpt-5-2-high",
-      "after": "20260226_mini-v2.0.0_gemini-3-pro-high",
-      "n": 500,
-      "solved_before": 364,
-      "solved_after": 0,
-      "regressions": 364,
-      "improvements": 0,
-      "regression_rate": 1.0,
-      "rate_ci95": [
-        0.9895563742654447,
-        1.0000000000000002
-      ],
-      "flip_rate": 0.728,
-      "mcnemar_p": 5.3224498000101884e-110,
-      "p_holm": 5.6950212860109016e-108
-    },
-    {
-      "category": "M",
-      "label": "model change within mini-SWE-agent v2.0.0",
       "before": "20260217_mini-v2.0.0_gpt-5-mini",
       "after": "20260217_mini-v2.0.0_kimi-k2-5-high",
       "n": 500,
@@ -2101,7 +1930,7 @@
       ],
       "flip_rate": 0.206,
       "mcnemar_p": 9.654706383228214e-14,
-      "p_holm": 7.627218042750289e-12
+      "p_holm": 7.530670978918006e-12
     },
     {
       "category": "M",
@@ -2120,26 +1949,7 @@
       ],
       "flip_rate": 0.248,
       "mcnemar_p": 1.4575322761455106e-20,
-      "p_holm": 1.2680530802465942e-18
-    },
-    {
-      "category": "M",
-      "label": "model change within mini-SWE-agent v2.0.0",
-      "before": "20260217_mini-v2.0.0_gpt-5-mini",
-      "after": "20260226_mini-v2.0.0_gemini-3-pro-high",
-      "n": 500,
-      "solved_before": 281,
-      "solved_after": 0,
-      "regressions": 281,
-      "improvements": 0,
-      "regression_rate": 1.0,
-      "rate_ci95": [
-        0.9865132059362116,
-        1.0
-      ],
-      "flip_rate": 0.562,
-      "mcnemar_p": 5.147557589468029e-85,
-      "p_holm": 5.147557589468029e-83
+      "p_holm": 1.253477757485139e-18
     },
     {
       "category": "M",
@@ -2159,44 +1969,6 @@
       "flip_rate": 0.114,
       "mcnemar_p": 0.0012635594724354632,
       "p_holm": 0.05433305731472492
-    },
-    {
-      "category": "M",
-      "label": "model change within mini-SWE-agent v2.0.0",
-      "before": "20260217_mini-v2.0.0_kimi-k2-5-high",
-      "after": "20260226_mini-v2.0.0_gemini-3-pro-high",
-      "n": 500,
-      "solved_before": 354,
-      "solved_after": 0,
-      "regressions": 354,
-      "improvements": 0,
-      "regression_rate": 1.0,
-      "rate_ci95": [
-        0.9892645237445842,
-        1.0
-      ],
-      "flip_rate": 0.708,
-      "mcnemar_p": 5.450188595210433e-107,
-      "p_holm": 5.66819613901885e-105
-    },
-    {
-      "category": "M",
-      "label": "model change within mini-SWE-agent v2.0.0",
-      "before": "20260217_mini-v2.0.0_minimax-2-5-high",
-      "after": "20260226_mini-v2.0.0_gemini-3-pro-high",
-      "n": 500,
-      "solved_before": 379,
-      "solved_after": 0,
-      "regressions": 379,
-      "improvements": 0,
-      "regression_rate": 1.0,
-      "rate_ci95": [
-        0.9899655627810562,
-        1.0
-      ],
-      "flip_rate": 0.758,
-      "mcnemar_p": 1.6242827758820155e-114,
-      "p_holm": 1.786711053470217e-112
     },
     {
       "category": "H",

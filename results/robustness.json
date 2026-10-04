@@ -1,24 +1,24 @@
 {
   "effect_sizes": {
     "model": {
-      "pairs": 111,
+      "pairs": 99,
       "log2_odds_ratio": {
-        "median": 0.5241592216589562,
-        "q1": -0.9510903995190535,
-        "q3": 2.4558825515562264
+        "median": 0.26793320524663305,
+        "q1": -1.051838931519618,
+        "q3": 1.7162070339994089
       },
       "abs_log2_odds_ratio": {
-        "median": 1.4739311883324124,
-        "q1": 0.7509724521600855,
-        "q3": 2.690315500867385
+        "median": 1.2648276876568445,
+        "q1": 0.6849039385950629,
+        "q3": 2.22650852980868
       },
       "cliffs_delta_rate_vs_rerun": {
-        "delta": 0.06156156156156156,
+        "delta": -0.05218855218855219,
         "magnitude": "negligible"
       },
       "cliffs_delta_direction_vs_rerun": {
-        "delta": 0.3611111111111111,
-        "magnitude": "medium"
+        "delta": 0.2904040404040404,
+        "magnitude": "small"
       }
     },
     "harness": {
@@ -57,132 +57,132 @@
     }
   },
   "cluster_bootstrap": {
-    "pairs": 121,
-    "clusters": 32,
+    "pairs": 109,
+    "clusters": 30,
     "resamples": 10000,
     "results": {
       "0.1": {
         "coarse": {
-          "mean_gain_over_random": 0.017082621009840728,
+          "mean_gain_over_random": 0.023173018703849198,
           "cluster_ci95": [
-            0.0026155542869524886,
-            0.03143024316077824
+            0.00658148953236566,
+            0.03980855916987847
           ],
           "excludes_zero": true
         },
         "predictive": {
-          "mean_gain_over_random": 0.20950916266862024,
+          "mean_gain_over_random": 0.23649188234580934,
           "cluster_ci95": [
-            0.17842742800481523,
-            0.23500826379548453
+            0.20303592945505305,
+            0.26551304557272415
           ],
           "excludes_zero": true
         },
         "flaky": {
-          "mean_gain_over_random": 0.022481739806633216,
+          "mean_gain_over_random": 0.02513333388786458,
           "cluster_ci95": [
-            0.009654513106042976,
-            0.03636180199091183
+            0.011865961259233329,
+            0.039786948022205344
           ],
           "excludes_zero": true
         },
         "fragile": {
-          "mean_gain_over_random": 0.2601017126282838,
+          "mean_gain_over_random": 0.2885767462773792,
           "cluster_ci95": [
-            0.2267547511064764,
-            0.28854026819065387
+            0.2489611449555472,
+            0.32440835919825944
           ],
           "excludes_zero": true
         },
         "informed": {
-          "mean_gain_over_random": 0.03428273226435676,
+          "mean_gain_over_random": 0.04095682544567305,
           "cluster_ci95": [
-            0.027458848367876237,
-            0.040486886335188585
+            0.03428191058162033,
+            0.047246594354169655
           ],
           "excludes_zero": true
         }
       },
       "0.25": {
         "coarse": {
-          "mean_gain_over_random": 0.04496471938100655,
+          "mean_gain_over_random": 0.052627915110418054,
           "cluster_ci95": [
-            0.02579182504369097,
-            0.06443554530848794
+            0.03324656659053459,
+            0.07359366765921589
           ],
           "excludes_zero": true
         },
         "predictive": {
-          "mean_gain_over_random": 0.2801878869773369,
+          "mean_gain_over_random": 0.3215164238546464,
           "cluster_ci95": [
-            0.23435099017565764,
-            0.31705716915677573
+            0.27492415761856803,
+            0.36014976529640125
           ],
           "excludes_zero": true
         },
         "flaky": {
-          "mean_gain_over_random": 0.06250692068330645,
+          "mean_gain_over_random": 0.0717781326731836,
           "cluster_ci95": [
-            0.037998273233835034,
-            0.087175035823914
+            0.04565962291587908,
+            0.09892500307265481
           ],
           "excludes_zero": true
         },
         "fragile": {
-          "mean_gain_over_random": 0.3347852652626105,
+          "mean_gain_over_random": 0.3708600338733834,
           "cluster_ci95": [
-            0.3031498704349898,
-            0.36055696561178685
+            0.33386796467502816,
+            0.4032084272311012
           ],
           "excludes_zero": true
         },
         "informed": {
-          "mean_gain_over_random": 0.07640975072630109,
+          "mean_gain_over_random": 0.08769559028584131,
           "cluster_ci95": [
-            0.06286516908896297,
-            0.08778748746599636
+            0.07444207464400511,
+            0.09902382629771068
           ],
           "excludes_zero": true
         }
       },
       "0.5": {
         "coarse": {
-          "mean_gain_over_random": 0.03074604521600227,
+          "mean_gain_over_random": 0.0294310573547305,
           "cluster_ci95": [
-            0.01417067073064987,
-            0.04854183426190025
+            0.011620067115387296,
+            0.04985959962760582
           ],
           "excludes_zero": true
         },
         "predictive": {
-          "mean_gain_over_random": 0.2365993308242364,
+          "mean_gain_over_random": 0.27562172900472465,
           "cluster_ci95": [
-            0.19229158310638572,
-            0.2718525487841397
+            0.23025754691392847,
+            0.31249262366922514
           ],
           "excludes_zero": true
         },
         "flaky": {
-          "mean_gain_over_random": 0.08015314854255762,
+          "mean_gain_over_random": 0.0944995279453179,
           "cluster_ci95": [
-            0.046499156751127625,
-            0.11277387082866984
+            0.05771933362128374,
+            0.13053200141167645
           ],
           "excludes_zero": true
         },
         "fragile": {
-          "mean_gain_over_random": 0.2916198960872401,
+          "mean_gain_over_random": 0.32315771668775894,
           "cluster_ci95": [
-            0.26808954970959786,
-            0.30930469530070415
+            0.29631483528395014,
+            0.3457282553012959
           ],
           "excludes_zero": true
         },
         "informed": {
-          "mean_gain_over_random": 0.10457906895302342,
+          "mean_gain_over_random": 0.1262049651688481,
           "cluster_ci95": [
-            0.08779228184056598,
-            0.11775067415844793
+            0.10762972406778594,
+            0.1416256928358306
           ],
           "excludes_zero": true
         }

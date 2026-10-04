@@ -53,6 +53,7 @@ def main():
 
     # 1. Change pairs on the 93 shared tasks.
     rates = {"M": [], "H": []}
+    pooled = {"M": [0, 0], "H": [0, 0]}
     for p in pairs:
         if p["category"] not in rates:
             continue
@@ -62,7 +63,10 @@ def main():
         if len(solved) < 5:
             continue
         rates[p["category"]].append(sum(not b[i] for i in solved) / len(solved))
+        pooled[p["category"]][0] += sum(not b[i] for i in solved); pooled[p["category"]][1] += len(solved)
     rerun = [p["regression_rate"] for p in pairs if p["category"] == "N-rerun"]
+    rr = [p for p in pairs if p["category"] == "N-rerun"]
+    rerun_pooled = sum(p["regressions"] for p in rr) / sum(p["solved_before"] for p in rr)
     rnd = random.Random(SEED)
     res = {}
     for cat, name in (("M", "model"), ("H", "harness")):
@@ -77,7 +81,8 @@ def main():
         res[name] = {"pairs": len(xs), "median_rate_shared93": statistics.median(xs),
                      "rerun_median": statistics.median(rerun), "median_diff_ci90": [lo, hi],
                      "equivalent_within_margin": -MARGIN < lo and hi < MARGIN,
-                     "cliffs_delta": d, "magnitude": magnitude(d)}
+                     "cliffs_delta": d, "magnitude": magnitude(d),
+                     "pooled_rate_shared93": pooled[cat][0] / pooled[cat][1], "rerun_pooled": rerun_pooled}
     out["shared_task_comparison"] = res
 
     # 2. Classification audit.

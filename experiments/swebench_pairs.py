@@ -21,6 +21,7 @@ import itertools
 import json
 import math
 import re
+import statistics
 import subprocess
 import sys
 import urllib.request
@@ -67,9 +68,20 @@ def fetch(split, sub, rel, dest):
     return True
 
 
-def load(split, sub):
-    """Per-task resolved flags: per_instance_details.json when present (mini-SWE-agent), otherwise
-    results/results.json, whose 'resolved' list is complemented by the split's task universe."""
+TOLERANCE = 2.0  # percentage points between per-task outcomes and the submission's declared score
+INVALID = {}     # (split, submission) -> (per-task %, declared %), excluded as internally inconsistent
+
+
+def declared(split, sub):
+    """The resolved percentage the submission declares in its metadata.yaml, or None."""
+    f = CACHE / split / f"{sub}.metadata.yaml"
+    if not fetch(split, sub, "metadata.yaml", f):
+        return None
+    m = re.search(r"^\s*resolved:\s*([\d.]+)\s*$", f.read_text(encoding="utf-8", errors="replace"), re.M)
+    return float(m[1]) if m else None
+
+
+def _outcomes(split, sub):
     f = CACHE / split / f"{sub}.json"
     if fetch(split, sub, "per_instance_details.json", f):
         d = json.loads(f.read_text(encoding="utf-8"))
@@ -79,6 +91,23 @@ def load(split, sub):
         solved = set(json.loads(g.read_text(encoding="utf-8")).get("resolved", []))
         return {i: i in solved for i in ids(split)}
     return None
+
+
+def load(split, sub):
+    """Per-task resolved flags: per_instance_details.json when present (mini-SWE-agent), otherwise
+    results/results.json, whose 'resolved' list is complemented by the split's task universe.
+    A submission whose per-task outcomes disagree with its own declared score by more than TOLERANCE
+    points is internally inconsistent (for example, a per-task file with every task unresolved) and is
+    excluded."""
+    out = _outcomes(split, sub)
+    if out is None:
+        return None
+    dec = declared(split, sub)
+    pct = 100.0 * sum(out.values()) / len(ids(split))
+    if dec is not None and abs(pct - dec) > TOLERANCE:
+        INVALID[(split, sub)] = (round(pct, 1), dec)
+        return None
+    return out
 
 
 def binom_two_sided(b, c):
@@ -194,12 +223,12 @@ def main():
         if not rs:
             continue
         rates = sorted(r["regression_rate"] for r in rs)
-        summary[cat] = {"pairs": len(rs), "median_regression_rate": rates[len(rates) // 2],
+        summary[cat] = {"pairs": len(rs), "median_regression_rate": statistics.median(rates),
                         "min": rates[0], "max": rates[-1],
-                        "median_flip_rate": sorted(r["flip_rate"] for r in rs)[len(rs) // 2],
+                        "median_flip_rate": statistics.median(r["flip_rate"] for r in rs),
                         "significant_after_holm": sum(r["p_holm"] < 0.05 for r in rs),
                         "pooled_regression_rate": sum(r["regressions"] for r in rs) / max(1, sum(r["solved_before"] for r in rs)),
-                        "median_asymmetry": sorted(abs(r["improvements"] - r["regressions"]) / max(1, r["improvements"] + r["regressions"]) for r in rs)[len(rs) // 2]}
+                        "median_asymmetry": statistics.median(abs(r["improvements"] - r["regressions"]) / max(1, r["improvements"] + r["regressions"]) for r in rs)}
     # Do change pairs lose more solved tasks than same-configuration reruns? One-sided Mann-Whitney U
     # (normal approximation) on per-pair regression rates.
     def mwu(x, y):
