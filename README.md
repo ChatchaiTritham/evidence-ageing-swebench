@@ -30,11 +30,12 @@ article.
 
 | Path | Purpose | Article items |
 |---|---|---|
-| `experiments/swebench_pairs.py` | Builds model-, harness- and configuration-change pairs and the noise floor; regression rates, Wilson intervals, exact McNemar tests with Holm correction, repository homogeneity | Tables 5–6, Figure 3 |
-| `experiments/v6_selection.py` | Six selection strategies evaluated without look-ahead (Algorithm 2), rerun control, paired Wilcoxon tests | Table 7, Figure 4 |
+| `experiments/swebench_pairs.py` | Builds model-, harness- and configuration-change pairs and the noise floor; regression rates, Wilson intervals, exact McNemar tests with Holm correction, repository homogeneity | Tables 5–6, Figure 2 |
+| `experiments/v6_selection.py` | Six selection strategies evaluated without look-ahead (Algorithm 2), rerun control, paired Wilcoxon tests | Table 7, Figure 3 |
 | `experiments/prop1_real.py` | Proposition 1 on real pairs: uniform versus ranked probes outside a targeted set | Table 8 |
 | `experiments/robustness.py` | Effect sizes (McNemar odds ratios, Cliff's delta) and a cluster bootstrap over pairs sharing a submission; reads only `results/*.json` | RQ1 and RQ3 robustness |
-| `figures/fig_pairs.py`, `figures/fig_v6.py` | Figures from the result files; `figures/style.py` holds the shared style | Figures 3–4 |
+| `experiments/rq1_sensitivity.py` | Noise floor on the 93 shared tasks, classification audit, data-source and harness-family splits; needs the cached archive | RQ1 and RQ3 sensitivity |
+| `figures/fig_pairs.py`, `figures/fig_v6.py` | Figures from the result files; `figures/style.py` holds the shared style | Figures 2–3 |
 | `results/*.json` | Outputs of the three experiments, as reported in the article | — |
 
 ## Requirements
@@ -51,8 +52,9 @@ python experiments/swebench_pairs.py   # downloads the archive files once, then 
 python experiments/v6_selection.py     # fixed seeds; byte-identical output on repeated runs
 python experiments/prop1_real.py
 python experiments/robustness.py      # effect sizes and cluster bootstrap, from results/*.json only
-python figures/fig_pairs.py            # -> figures/figure3_pairs.pdf
-python figures/fig_v6.py               # -> figures/figure4_selection.pdf
+python experiments/rq1_sensitivity.py # noise-floor sensitivity, audit, source and family splits
+python figures/fig_pairs.py            # -> figures/figure2_pairs.pdf
+python figures/fig_v6.py               # -> figures/figure3_selection.pdf
 ```
 
 Every archive listing and download is pinned to the commit above (`REF` in `experiments/swebench_pairs.py`), so a

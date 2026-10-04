@@ -1,0 +1,98 @@
+{
+  "shared_tasks": 93,
+  "shared_task_comparison": {
+    "model": {
+      "pairs": 111,
+      "median_rate_shared93": 0.10526315789473684,
+      "rerun_median": 0.17517006802721088,
+      "median_diff_ci90": [
+        -0.1174593460395174,
+        0.030636292223095052
+      ],
+      "equivalent_within_margin": false,
+      "cliffs_delta": -0.006756756756756757,
+      "magnitude": "negligible"
+    },
+    "harness": {
+      "pairs": 17,
+      "median_rate_shared93": 0.05555555555555555,
+      "rerun_median": 0.17517006802721088,
+      "median_diff_ci90": [
+        -0.17905563347358577,
+        -0.024274884082986427
+      ],
+      "equivalent_within_margin": false,
+      "cliffs_delta": -0.6372549019607843,
+      "magnitude": "large"
+    }
+  },
+  "classification_audit": {
+    "model_pairs_checked": 111,
+    "harness_pairs_checked": 17,
+    "violations": [],
+    "harness_model_tokens": [
+      [
+        "claude4sonnet",
+        "claude4sonnet"
+      ],
+      [
+        "claudeopus45",
+        "claudeopus45"
+      ],
+      [
+        "claudesonnet4",
+        "claude4sonnet"
+      ],
+      [
+        "gemini3propreview",
+        "gemini3pro"
+      ],
+      [
+        "gpt5",
+        "gpt5"
+      ],
+      [
+        "gpt5220251211",
+        "gpt52"
+      ],
+      [
+        "gpt5mini",
+        "gpt5mini"
+      ],
+      [
+        "kimik2",
+        "kimik2"
+      ],
+      [
+        "qwen3coder480ba35b",
+        "qwen3coder480ba35b"
+      ]
+    ]
+  },
+  "data_source": {
+    "per_instance": {
+      "pairs": 113,
+      "median_regression_rate": 0.11873350923482849
+    },
+    "mixed_or_resolved_list": {
+      "pairs": 15,
+      "median_regression_rate": 0.05864197530864197
+    }
+  },
+  "harness_family_rq3": {
+    "mini_swe_agent_only": {
+      "pairs": 113,
+      "gain_fragile_B0.1": 0.24937320626006568,
+      "gain_fragile_B0.25": 0.32553890003787145,
+      "gain_predictive_B0.1": 0.20610784606177854,
+      "gain_predictive_B0.25": 0.2737818674955705
+    },
+    "other_harness_involved": {
+      "pairs": 8,
+      "gain_fragile_B0.1": 0.41164186507936507,
+      "gain_fragile_B0.25": 0.4653901740620491,
+      "gain_predictive_B0.1": 0.25755275974025976,
+      "gain_predictive_B0.25": 0.37067291215728715
+    }
+  }
+}

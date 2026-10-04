@@ -26,7 +26,7 @@ def main():
     h, l = axs[0].get_legend_handles_labels()
     fig.legend(h, l, loc="lower center", ncol=3, frameon=False, bbox_to_anchor=(0.5, -0.16))
     fig.tight_layout()
-    fig.savefig(HERE / "figure4_selection.pdf", bbox_inches="tight"); plt.close(fig)
+    fig.savefig(HERE / "figure3_selection.pdf", bbox_inches="tight"); plt.close(fig)
 
 
 if __name__ == "__main__":

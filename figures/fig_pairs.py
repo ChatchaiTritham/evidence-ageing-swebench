@@ -35,7 +35,7 @@ def main():
         ax.set_xticks(range(len(CATS)), [lab + chr(10) + f"(n={counts[c]})" for c, lab in CATS], fontsize=7)
         ax.set(ylabel=ylabel, ylim=(-0.02, ymax)); ax.set_title(title, loc="left"); ax.grid(axis="x", visible=False)
     fig.tight_layout()
-    fig.savefig(HERE / "figure3_pairs.pdf"); plt.close(fig)
+    fig.savefig(HERE / "figure2_pairs.pdf"); plt.close(fig)
 
 
 if __name__ == "__main__":
