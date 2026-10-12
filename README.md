@@ -1,11 +1,18 @@
-# Evidence ageing in LLM-based software engineering agents: analysis scripts
+# Evidence ageing in large language model (LLM)-based software engineering agents: analysis scripts
+
+## Title
+
+Evidence ageing in large language model (LLM)-based software engineering agents: analysis scripts for the
+article *Evidence ageing in large language model (LLM)-based software engineering agents: an empirical
+characterisation and the limits of uniform probing* (R. Saosing and C. Tritham, submitted to PeerJ Computer Science).
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23097803.svg)](https://doi.org/10.5281/zenodo.23097803)
 
+The DOI above always resolves to the latest version (concept DOI); version v1.3.0 is doi:10.5281/zenodo.23131248.
+
 ## Description
 
-Analysis scripts and summary results for the article *Evidence Ageing in LLM-Based Software Engineering
-Agents: An Empirical Characterisation and the Limits of Uniform Probing* (R. Saosing and C. Tritham).
+Analysis scripts and summary results for the article named above.
 
 The study asks which evaluation results of a software engineering agent still hold after one dimension of
 the agent (its model, its harness or a configuration setting) changes. It compares pairs of public
@@ -14,9 +21,17 @@ configurations, evaluates history-based selection of tasks to re-run without loo
 analytic bound on uniformly sampled probes. The scripts recompute every empirical table and figure of the
 article.
 
-## Dataset information
+## Dataset Information
 
-- **Source.** Public per-task outcomes of SWE-bench submissions in
+Third-party data (not produced by the authors):
+
+- **Benchmark.** SWE-bench Verified, a human-screened subset of 500 tasks of SWE-bench (Jimenez et al.,
+  ICLR 2024, <https://www.swebench.com/>; OpenAI, *Introducing SWE-bench Verified*, 2024,
+  <https://openai.com/index/introducing-swe-bench-verified/>). Task identifiers are read from the Hugging Face
+  datasets [`princeton-nlp/SWE-bench_Verified`](https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified)
+  and [`princeton-nlp/SWE-bench_Lite`](https://huggingface.co/datasets/princeton-nlp/SWE-bench_Lite)
+  (split `test`) through the Hugging Face datasets-server API.
+- **Outcomes.** Public per-task outcomes of SWE-bench submissions in
   [SWE-bench/experiments](https://github.com/SWE-bench/experiments), splits `evaluation/verified`
   (500 tasks) and `evaluation/lite` (300 tasks; 93 shared with Verified).
 - **Version used.** Archive commit `40f164d5b8f1d249bf95a6df8b74b577fd8e519d` (3 September 2026).
@@ -26,7 +41,7 @@ article.
 - **Included here.** `results/*.json`: per-pair aggregates (counts, rates, test statistics) and per-strategy
   recall summaries. They contain no per-task archive data.
 
-## Code information
+## Code Information
 
 | Path | Purpose | Article items |
 |---|---|---|
@@ -45,7 +60,9 @@ article.
 - The GitHub CLI `gh`, authenticated, which `swebench_pairs.py` uses to list the archive.
 - Internet access on the first run, to download the archive files.
 
-## Usage
+## Usage Instructions
+
+The scripts take no command-line options; run them from the repository root in the order below.
 
 ```bash
 python experiments/swebench_pairs.py   # downloads the archive files once, then writes results/swebench_pairs.json
@@ -88,13 +105,14 @@ The reported results were produced on Windows 11 (build 26200), Intel Core i7-77
 16 GB RAM, Python 3.11.15. No GPU and no model inference are required: the scripts analyse archived outcomes
 only.
 
-## Citation
+## Citations
 
 If you use these scripts, please cite the article and this software (see `CITATION.cff`;
 doi: [10.5281/zenodo.23097803](https://doi.org/10.5281/zenodo.23097803)). Please also cite SWE-bench
-(Jimenez et al., ICLR 2024) and the SWE-bench/experiments archive.
+(C. E. Jimenez et al., "SWE-bench: Can Language Models Resolve Real-world GitHub Issues?", ICLR 2024),
+SWE-bench Verified (OpenAI, 2024) and the SWE-bench/experiments archive.
 
-## Licence and contributions
+## License & Contribution Guidelines
 
 MIT (see `LICENSE`). The licence covers the scripts and summary results in this repository only, not the
 SWE-bench archive. Issues and pull requests are welcome; please describe how a change affects the
